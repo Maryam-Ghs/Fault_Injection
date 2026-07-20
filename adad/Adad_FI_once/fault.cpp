@@ -23,6 +23,17 @@ extern bool fault_injected;
 extern unsigned long long global_event_count;
 extern std::chrono::steady_clock::time_point pain_start;
 
+static int stable_location_id(const std::string &key) {
+  // FNV-1a gives the same positive 31-bit ID regardless of discovery order.
+  uint32_t hash = UINT32_C(2166136261);
+  for (const unsigned char byte : key) {
+    hash ^= byte;
+    hash *= UINT32_C(16777619);
+  }
+  int id = static_cast<int>(hash & UINT32_C(0x7fffffff));
+  return id == 0 ? 1 : id;
+}
+
 int get_location_id(const char *operation) {
   void *frames[3];
   const int frame_count = backtrace(frames, 3);
@@ -36,7 +47,13 @@ int get_location_id(const char *operation) {
   if (existing != fault_strings.end()) {
     return existing->second;
   }
-  const int id = static_cast<int>(fault_strings.size()) + 1;
+  const int id = stable_location_id(key);
+  for (const auto &entry : fault_strings) {
+    if (entry.second == id && entry.first != key) {
+      fprintf(stderr, "FI_ERROR\tlocation_id_collision=%d\n", id);
+      exit(3);
+    }
+  }
   fault_strings[key] = id;
   return id;
 }

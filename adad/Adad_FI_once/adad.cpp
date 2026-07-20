@@ -93,7 +93,7 @@ adad adad::operator+ (int dval) const {
 adad operator+ (int dval, const adad &a) {
   adad   r;
   int id = get_location_id("A=K+A");
-  r.value = get_faulty_integer(id, dval+r.value);
+  r.value = get_faulty_integer(id, dval+a.value);
   return(r);
 }
 
@@ -195,7 +195,7 @@ adad adad::operator/ (int dval) const {
 adad operator/ (int dval, const adad &a) {
   adad r;
   int id = get_location_id("A=K/A");
-  r.value = get_faulty_integer(id, dval / r.value);
+  r.value = get_faulty_integer(id, dval / a.value);
   return(r);
 }
 

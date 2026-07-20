@@ -50,8 +50,14 @@ void coredump(int index, int lb, int ub) {
     printf("indexing fault %d not in %d-%d\n", index, lb, ub);
   }
   ++num_core;
-  fprintf(stderr, "FI_RUN\tinjected=%d\ttotal_events=%llu\tstatus=index_fault\n",
-          fault_injected ? 1 : 0, global_event_count);
+  const auto now = std::chrono::steady_clock::now();
+  const unsigned long long elapsed_ns =
+      std::chrono::duration_cast<std::chrono::nanoseconds>(now - pain_start)
+          .count();
+  fprintf(stderr,
+          "FI_RUN\tinjected=%d\ttotal_events=%llu\telapsed_ns=%llu\t"
+          "status=index_fault\n",
+          fault_injected ? 1 : 0, global_event_count, elapsed_ns);
   fflush(stderr);
   exit(2);
 }
@@ -143,7 +149,13 @@ int main(int argc, char **argv) {
     printf("FI_LOCATIONS_END\n");
   }
 
-  fprintf(stderr, "FI_RUN\tinjected=%d\ttotal_events=%llu\tstatus=normal\n",
-          fault_injected ? 1 : 0, global_event_count);
+  const auto pain_end = std::chrono::steady_clock::now();
+  const unsigned long long pain_elapsed_ns =
+      std::chrono::duration_cast<std::chrono::nanoseconds>(pain_end - pain_start)
+          .count();
+  fprintf(stderr,
+          "FI_RUN\tinjected=%d\ttotal_events=%llu\telapsed_ns=%llu\t"
+          "status=normal\n",
+          fault_injected ? 1 : 0, global_event_count, pain_elapsed_ns);
   return pain_status;
 }

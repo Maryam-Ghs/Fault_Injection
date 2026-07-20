@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <cmath>
 #include <string>
 #include <map>
 #include "adaf.h"
@@ -58,7 +59,7 @@ adaf adaf::operator+ (float dval) const {
 adaf operator+ (float dval, const adaf &a) {
   adaf   r;
   int id = get_location_id("F=K+F");
-  r.value = get_faulty_float(id, dval+r.value);
+  r.value = get_faulty_float(id, dval+a.value);
   return(r);
 }
 
@@ -154,7 +155,7 @@ adaf adaf::operator/ (float dval) const {
 adaf operator/ (float dval, const adaf &a) {
   adaf r;
   int id = get_location_id("F=K/F");
-  r.value = get_faulty_float(id, dval / r.value);
+  r.value = get_faulty_float(id, dval / a.value);
   return(r);
 }
 
@@ -246,27 +247,27 @@ bool operator<= (float dval, const adaf &a) {
 
 bool operator>= (float dval, const adaf &a) {
   int id = get_location_id("K>=F");
-  return get_faulty_boolean(id, dval <= a.value);
+  return get_faulty_boolean(id, dval >= a.value);
 }
 
 adaf expf(const adaf &a) {
   int id = get_location_id("exp(F)");
-  return get_faulty_float(id, expf(a.value));
+  return get_faulty_float(id, std::exp(a.value));
 }
 
 adaf exp(const adaf &a) {
   int id = get_location_id("exp(F)");
-  return get_faulty_float(id, expf(a.value));
+  return get_faulty_float(id, std::exp(a.value));
 }
 
 adaf sqrtf(const adaf &a) {
   int id = get_location_id("sqrt(F)");
-  return get_faulty_float(id, sqrtf(a.value));
+  return get_faulty_float(id, std::sqrt(a.value));
 }
 
 adaf sqrt(const adaf &a) {
   int id = get_location_id("sqrt(F)");
-  return get_faulty_float(id, sqrtf(a.value));
+  return get_faulty_float(id, std::sqrt(a.value));
 }
 
 std::ostream& operator<<(std::ostream& os, const adaf& a) {

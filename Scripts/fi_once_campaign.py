@@ -10,6 +10,7 @@ import os
 import random
 import re
 import signal
+import shutil
 import subprocess
 import sys
 import time
@@ -26,17 +27,37 @@ LIBRARY = ROOT / "adad" / "Adad_FI_once"
 RESULT_FIELDS = [
     "campaign", "source", "program", "location_id", "kind", "operation",
     "address", "source_line", "source_lines", "source_fraction",
+    "source_fraction_from_end", "golden_first_event", "golden_total_events",
+    "first_event_fraction", "first_event_fraction_from_end",
+    "target_occurrence", "target_total_occurrences", "occurrence_policy",
+    "random_seed", "fault_mode", "bit_index", "golden_runtime_ns",
+    "golden_pain_runtime_ns", "faulty_runtime_ns", "faulty_pain_runtime_ns",
+    "injection_elapsed_ns", "injection_global_event",
+    "event_fraction", "event_fraction_from_end", "time_fraction",
+    "time_fraction_from_end", "injected", "outcome", "returncode",
+    "crash_count", "timeout_count", "matched_count", "notmatched_count",
+    "golden_output_bytes", "faulty_output_bytes", "before_bits", "after_bits",
+]
+
+# Schema used before explicit from-end fractions and compatibility counters
+# were added. A partially upgraded file can contain both 34- and 42-field
+# rows under this old header; migrate_results_schema handles that exact case.
+LEGACY_RESULT_FIELDS = [
+    "campaign", "source", "program", "location_id", "kind", "operation",
+    "address", "source_line", "source_lines", "source_fraction",
     "golden_first_event", "golden_total_events", "first_event_fraction",
     "target_occurrence", "target_total_occurrences", "occurrence_policy",
     "random_seed", "fault_mode", "bit_index", "golden_runtime_ns",
-    "faulty_runtime_ns", "injection_elapsed_ns", "injection_global_event",
-    "event_fraction", "time_fraction", "injected", "outcome", "returncode",
+    "golden_pain_runtime_ns", "faulty_runtime_ns", "faulty_pain_runtime_ns",
+    "injection_elapsed_ns", "injection_global_event", "event_fraction",
+    "time_fraction", "injected", "outcome", "returncode",
     "golden_output_bytes", "faulty_output_bytes", "before_bits", "after_bits",
 ]
 
 STATUS_FIELDS = [
-    "campaign", "source", "state", "detail", "compile_runtime_ns",
-    "golden_runtime_ns", "discovery_runtime_ns", "locations", "total_events",
+    "campaign", "source", "occurrence_policy", "random_seed", "state",
+    "detail", "compile_runtime_ns", "golden_runtime_ns",
+    "discovery_runtime_ns", "locations", "total_events",
 ]
 
 
@@ -64,6 +85,15 @@ class Location:
 class CsvAppender:
     def __init__(self, path: Path, fields: list[str]):
         path.parent.mkdir(parents=True, exist_ok=True)
+        if path.exists() and path.stat().st_size:
+            with path.open(newline="", encoding="utf-8") as existing:
+                header = next(csv.reader(existing), [])
+            if header != fields:
+                raise ValueError(
+                    f"CSV schema mismatch in {path}; expected {len(fields)} "
+                    f"columns but found {len(header)}. Run with --repair-only "
+                    "or use --clean for a new campaign."
+                )
         self.file = path.open("a", newline="", encoding="utf-8")
         self.writer = csv.DictWriter(self.file, fieldnames=fields)
         if path.stat().st_size == 0:
@@ -169,6 +199,18 @@ def parse_injection(stderr: bytes) -> dict[str, str]:
     return {}
 
 
+def parse_run_metadata(stderr: bytes) -> dict[str, str]:
+    metadata: dict[str, str] = {}
+    for line in stderr.decode("utf-8", errors="replace").splitlines():
+        if line.startswith("FI_RUN\t"):
+            metadata = dict(
+                field.split("=", 1)
+                for field in line.split("\t")[1:]
+                if "=" in field
+            )
+    return metadata
+
+
 def resolve_line(binary: Path, address: str) -> int | None:
     if not address:
         return None
@@ -199,7 +241,11 @@ def parse_locations(output: bytes, binary: Path) -> tuple[list[Location], int]:
         if len(fields) != 6:
             continue
         location_id, kind, operation, count, first_event, description = fields
-        address_match = re.search(r"\(\+(0x[0-9a-fA-F]+)\)", description)
+        # Binaries are linked without PIE, so the absolute address printed by
+        # backtrace_symbols can be resolved directly and is not ASLR-relative.
+        address_match = re.search(r"\[(0x[0-9a-fA-F]+)\]", description)
+        if not address_match:
+            address_match = re.search(r"\(\+(0x[0-9a-fA-F]+)\)", description)
         address = address_match.group(1) if address_match else ""
         locations.append(
             Location(
@@ -248,6 +294,122 @@ def ratio(numerator: int | str | None, denominator: int | str | None) -> str:
         return ""
 
 
+def fraction_from_end(value: str) -> str:
+    if value == "":
+        return ""
+    try:
+        return f"{1.0 - float(value):.9f}"
+    except ValueError:
+        return ""
+
+
+def expanded_result_row(row: dict[str, str]) -> dict[str, str | int]:
+    """Expand a valid legacy result row into the current result schema."""
+    source_fraction = row.get("source_fraction", "")
+    first_fraction = row.get("first_event_fraction", "")
+    event_fraction = row.get("event_fraction", "")
+    time_fraction = row.get("time_fraction", "")
+    outcome = row.get("outcome", "")
+    expanded: dict[str, str | int] = dict(row)
+    expanded.update({
+        "source_fraction_from_end": fraction_from_end(source_fraction),
+        "first_event_fraction_from_end": fraction_from_end(first_fraction),
+        "event_fraction_from_end": fraction_from_end(event_fraction),
+        "time_fraction_from_end": fraction_from_end(time_fraction),
+        "crash_count": 1 if outcome == "crash_or_error" else 0,
+        "timeout_count": 1 if outcome == "timeout" else 0,
+        "matched_count": 1 if outcome == "matched" else 0,
+        "notmatched_count": 1 if outcome == "not_matched" else 0,
+    })
+    return expanded
+
+
+def migrate_results_schema(path: Path) -> Path | None:
+    """Repair the known mixed 34/42-column result file, preserving a backup."""
+    if not path.exists() or path.stat().st_size == 0:
+        return None
+    with path.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.reader(handle))
+    if not rows:
+        return None
+    header = rows[0]
+    if header == RESULT_FIELDS:
+        bad = [index for index, row in enumerate(rows[1:], 2) if len(row) != len(header)]
+        if bad:
+            raise ValueError(
+                f"{path} has the current header but malformed rows at lines {bad[:5]}"
+            )
+        migrated = []
+        changed = False
+        for values in rows[1:]:
+            original = dict(zip(RESULT_FIELDS, values))
+            expanded = expanded_result_row(original)
+            migrated.append(expanded)
+            if any(str(expanded[field]) != original.get(field, "") for field in RESULT_FIELDS):
+                changed = True
+        if not changed:
+            return None
+    elif header != LEGACY_RESULT_FIELDS:
+        raise ValueError(
+            f"unknown results schema in {path}: {len(header)} header columns"
+        )
+    else:
+        migrated = []
+        for line_number, values in enumerate(rows[1:], 2):
+            if len(values) == len(LEGACY_RESULT_FIELDS):
+                migrated.append(expanded_result_row(dict(zip(LEGACY_RESULT_FIELDS, values))))
+            elif len(values) == len(RESULT_FIELDS):
+                migrated.append(dict(zip(RESULT_FIELDS, values)))
+            else:
+                raise ValueError(
+                    f"cannot migrate {path}: line {line_number} has {len(values)} fields"
+                )
+
+    backup = path.with_name(f"{path.name}.schema_backup_{time.time_ns()}")
+    shutil.copy2(path, backup)
+    temporary = path.with_name(f".{path.name}.migrating")
+    with temporary.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=RESULT_FIELDS)
+        writer.writeheader()
+        writer.writerows(migrated)
+        handle.flush()
+        os.fsync(handle.fileno())
+    os.replace(temporary, path)
+    return backup
+
+
+def rebuild_per_program_reports(results_path: Path, output_dir: Path) -> int:
+    """Rebuild per-program reports from the authoritative consolidated CSV."""
+    if not results_path.exists() or results_path.stat().st_size == 0:
+        return 0
+    groups: dict[tuple[str, str], list[dict[str, str]]] = {}
+    with results_path.open(newline="", encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            groups.setdefault((row["campaign"], row["program"]), []).append(row)
+    for (campaign, program), rows in groups.items():
+        destination = output_dir / "FI_Reports" / campaign / f"{program}_results.csv"
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        temporary = destination.with_name(f".{destination.name}.rebuilding")
+        with temporary.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=RESULT_FIELDS)
+            writer.writeheader()
+            writer.writerows(rows)
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temporary, destination)
+    return len(groups)
+
+
+def clean_output_directory(path: Path) -> None:
+    resolved = path.resolve()
+    forbidden = {Path("/").resolve(), Path.home().resolve(), ROOT.resolve(),
+                 (ROOT / "Output").resolve(), DEFAULT_SOURCE.resolve()}
+    if resolved in forbidden or len(resolved.parts) < 3:
+        raise ValueError(f"refusing to clean unsafe output directory: {resolved}")
+    if resolved.exists():
+        shutil.rmtree(resolved)
+
+
 def fault_modes(kind: str) -> tuple[str, ...]:
     if kind == "integer":
         return ("int_msb", "int_lsb", "int_middle")
@@ -285,18 +447,29 @@ def load_result_keys(path: Path) -> set[tuple[str, str, str, str]]:
         for row in csv.DictReader(handle):
             keys.add((
                 row["campaign"], row["source"], row["location_id"],
-                row["fault_mode"] + ":" + row["target_occurrence"],
+                ":".join((
+                    row["fault_mode"], row["target_occurrence"],
+                    row.get("occurrence_policy", "first"),
+                    row.get("random_seed", ""),
+                )),
             ))
     return keys
 
 
-def load_completed(path: Path) -> set[tuple[str, str]]:
+def load_completed(
+    path: Path, occurrence_policy: str, random_seed: int
+) -> set[tuple[str, str]]:
     completed: set[tuple[str, str]] = set()
     if not path.exists():
         return completed
     with path.open(newline="", encoding="utf-8") as handle:
         for row in csv.DictReader(handle):
-            if row.get("state") == "complete":
+            expected_seed = str(random_seed) if occurrence_policy == "random" else ""
+            if (
+                row.get("state") == "complete"
+                and row.get("occurrence_policy") == occurrence_policy
+                and row.get("random_seed", "") == expected_seed
+            ):
                 completed.add((row["campaign"], row["source"]))
     return completed
 
@@ -336,13 +509,16 @@ def process_program(
         )
         transformed_path.write_text(transformed, encoding="utf-8")
     except Exception as error:
-        statuses.append(status_row(campaign, relative, "transform_failed", str(error)))
+        statuses.append(status_row(
+            args, campaign, relative, "transform_failed", str(error)
+        ))
         return
 
     operator_source = "adad.cpp" if campaign == "integer" else "adaf.cpp"
     compile_result = run_command([
         "g++", "-std=c++17", "-g", "-O0", "-fno-inline",
-        "-fno-omit-frame-pointer", "-rdynamic", f"-I{LIBRARY}",
+        "-fno-omit-frame-pointer", "-fno-pie", "-no-pie", "-rdynamic",
+        f"-I{LIBRARY}",
         str(transformed_path), str(LIBRARY / "main.cpp"),
         str(LIBRARY / operator_source), str(LIBRARY / "fault.cpp"),
         "-lm", "-o", str(binary),
@@ -352,19 +528,21 @@ def process_program(
         log.parent.mkdir(parents=True, exist_ok=True)
         log.write_bytes(compile_result.stderr)
         statuses.append(status_row(
-            campaign, relative, "compile_failed", f"returncode={compile_result.returncode}",
+            args, campaign, relative, "compile_failed",
+            f"returncode={compile_result.returncode}",
             compile_ns=compile_result.runtime_ns,
         ))
         return
 
     golden = run_command([str(binary)], args.timeout)
+    golden_metadata = parse_run_metadata(golden.stderr)
     golden_dir = args.output_dir / "golden" / campaign
     golden_dir.mkdir(parents=True, exist_ok=True)
     (golden_dir / f"{program}.stdout").write_bytes(golden.stdout)
     (golden_dir / f"{program}.stderr").write_bytes(golden.stderr)
     if golden.returncode != 0:
         statuses.append(status_row(
-            campaign, relative, "golden_failed",
+            args, campaign, relative, "golden_failed",
             "timeout" if golden.timed_out else f"returncode={golden.returncode}",
             compile_result.runtime_ns, golden.runtime_ns,
         ))
@@ -373,7 +551,7 @@ def process_program(
     discovery = run_command([str(binary), "-l"], args.timeout)
     if discovery.returncode != 0:
         statuses.append(status_row(
-            campaign, relative, "discovery_failed",
+            args, campaign, relative, "discovery_failed",
             "timeout" if discovery.timed_out else f"returncode={discovery.returncode}",
             compile_result.runtime_ns, golden.runtime_ns, discovery.runtime_ns,
         ))
@@ -387,7 +565,13 @@ def process_program(
     if args.max_locations:
         locations = locations[: args.max_locations]
 
-    for location in locations:
+    per_program_results = CsvAppender(
+        args.output_dir / "FI_Reports" / campaign / f"{program}_results.csv",
+        RESULT_FIELDS,
+    )
+
+    try:
+      for location in locations:
         for mode in fault_modes(location.kind):
             occurrence = (
                 1 if args.occurrence == "first" else reproducible_occurrence(
@@ -395,7 +579,10 @@ def process_program(
                 )
             )
             key = (
-                campaign, relative, str(location.location_id), f"{mode}:{occurrence}"
+                campaign, relative, str(location.location_id), ":".join((
+                    mode, str(occurrence), args.occurrence,
+                    str(args.seed) if args.occurrence == "random" else "",
+                ))
             )
             if args.resume and key in result_keys:
                 continue
@@ -405,6 +592,7 @@ def process_program(
                 str(occurrence), "-t", mode,
             ], args.timeout)
             injection = parse_injection(faulty.stderr)
+            faulty_metadata = parse_run_metadata(faulty.stderr)
             injected = bool(injection)
             if faulty.timed_out:
                 outcome = "timeout"
@@ -425,6 +613,12 @@ def process_program(
 
             injection_event = injection.get("global_event", "")
             injection_elapsed = injection.get("elapsed_ns", "")
+            source_fraction = ratio(location.source_line, source_lines)
+            first_event_fraction = ratio(location.first_event, total_events)
+            event_fraction = ratio(injection_event, total_events)
+            time_fraction = ratio(
+                injection_elapsed, golden_metadata.get("elapsed_ns", "")
+            )
             row = {
                 "campaign": campaign,
                 "source": relative,
@@ -435,10 +629,14 @@ def process_program(
                 "address": location.address,
                 "source_line": location.source_line or "",
                 "source_lines": source_lines,
-                "source_fraction": ratio(location.source_line, source_lines),
+                "source_fraction": source_fraction,
+                "source_fraction_from_end": fraction_from_end(source_fraction),
                 "golden_first_event": location.first_event,
                 "golden_total_events": total_events,
-                "first_event_fraction": ratio(location.first_event, total_events),
+                "first_event_fraction": first_event_fraction,
+                "first_event_fraction_from_end": fraction_from_end(
+                    first_event_fraction
+                ),
                 "target_occurrence": occurrence,
                 "target_total_occurrences": location.count,
                 "occurrence_policy": args.occurrence,
@@ -446,30 +644,41 @@ def process_program(
                 "fault_mode": mode,
                 "bit_index": bit_for_mode(mode),
                 "golden_runtime_ns": golden.runtime_ns,
+                "golden_pain_runtime_ns": golden_metadata.get("elapsed_ns", ""),
                 "faulty_runtime_ns": faulty.runtime_ns,
+                "faulty_pain_runtime_ns": faulty_metadata.get("elapsed_ns", ""),
                 "injection_elapsed_ns": injection_elapsed,
                 "injection_global_event": injection_event,
-                "event_fraction": ratio(injection_event, total_events),
-                "time_fraction": ratio(injection_elapsed, golden.runtime_ns),
+                "event_fraction": event_fraction,
+                "event_fraction_from_end": fraction_from_end(event_fraction),
+                "time_fraction": time_fraction,
+                "time_fraction_from_end": fraction_from_end(time_fraction),
                 "injected": 1 if injected else 0,
                 "outcome": outcome,
                 "returncode": faulty.returncode,
+                "crash_count": 1 if outcome == "crash_or_error" else 0,
+                "timeout_count": 1 if outcome == "timeout" else 0,
+                "matched_count": 1 if outcome == "matched" else 0,
+                "notmatched_count": 1 if outcome == "not_matched" else 0,
                 "golden_output_bytes": len(golden.stdout),
                 "faulty_output_bytes": len(faulty.stdout),
                 "before_bits": injection.get("before", ""),
                 "after_bits": injection.get("after", ""),
             }
             results.append(row)
+            per_program_results.append(row)
             result_keys.add(key)
+    finally:
+        per_program_results.close()
 
     statuses.append(status_row(
-        campaign, relative, "complete", "", compile_result.runtime_ns,
+        args, campaign, relative, "complete", "", compile_result.runtime_ns,
         golden.runtime_ns, discovery.runtime_ns, len(locations), total_events,
     ))
 
 
 def status_row(
-    campaign: str, source: str, state: str, detail: str,
+    args: argparse.Namespace, campaign: str, source: str, state: str, detail: str,
     compile_ns: int | str = "", golden_ns: int | str = "",
     discovery_ns: int | str = "", locations: int | str = "",
     total_events: int | str = "",
@@ -477,6 +686,8 @@ def status_row(
     return {
         "campaign": campaign,
         "source": source,
+        "occurrence_policy": args.occurrence,
+        "random_seed": args.seed if args.occurrence == "random" else "",
         "state": state,
         "detail": detail,
         "compile_runtime_ns": compile_ns,
@@ -510,6 +721,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--resume", action=argparse.BooleanOptionalAction, default=True
     )
+    parser.add_argument(
+        "--clean", action="store_true",
+        help="delete the selected output directory before starting the campaign",
+    )
+    parser.add_argument(
+        "--repair-only", action="store_true",
+        help="repair a known old results.csv schema and exit without running",
+    )
     args = parser.parse_args()
     args.source_dir = args.source_dir.resolve()
     args.output_dir = args.output_dir.resolve()
@@ -522,6 +741,25 @@ def main() -> int:
         print(f"source directory does not exist: {args.source_dir}", file=sys.stderr)
         return 2
 
+    if args.clean and args.repair_only:
+        print("--clean and --repair-only cannot be used together", file=sys.stderr)
+        return 2
+    if args.clean:
+        clean_output_directory(args.output_dir)
+
+    results_path = args.output_dir / "results.csv"
+    try:
+        backup = migrate_results_schema(results_path)
+    except ValueError as error:
+        print(f"results repair failed: {error}", file=sys.stderr)
+        return 2
+    if backup:
+        print(f"repaired results schema; original saved as {backup}")
+    rebuilt = rebuild_per_program_reports(results_path, args.output_dir)
+    if args.repair_only:
+        print(f"results schema is current; rebuilt {rebuilt} per-program reports")
+        return 0
+
     sources = sorted(args.source_dir.rglob("*.cpp"))
     if args.filter:
         sources = [source for source in sources if args.filter in str(source)]
@@ -531,10 +769,12 @@ def main() -> int:
         ("integer", "float") if args.campaign == "both" else (args.campaign,)
     )
 
-    results_path = args.output_dir / "results.csv"
     statuses_path = args.output_dir / "program_status.csv"
     result_keys = load_result_keys(results_path) if args.resume else set()
-    completed = load_completed(statuses_path) if args.resume else set()
+    completed = (
+        load_completed(statuses_path, args.occurrence, args.seed)
+        if args.resume else set()
+    )
     results = CsvAppender(results_path, RESULT_FIELDS)
     statuses = CsvAppender(statuses_path, STATUS_FIELDS)
 
