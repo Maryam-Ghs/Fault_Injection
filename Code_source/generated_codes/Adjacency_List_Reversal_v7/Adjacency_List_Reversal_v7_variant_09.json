@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:25:47.662622+00:00",
+  "request_started_at_utc": "2026-07-16T20:25:28.804568+00:00",
+  "duration_seconds": 18.858,
+  "source_file": "cpp_codes/Adjacency_List_Reversal_v7.cpp",
+  "source_relative_path": "Adjacency_List_Reversal_v7.cpp",
+  "source_sha256": "e36a6e178f0f09b3f6e85eed733e15cdc327749e9fbb8645df2e90148533fff9",
+  "source_bytes": 3801,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adjacency_List_Reversal_v7/Adjacency_List_Reversal_v7_variant_09.cpp",
+  "variant_number": 9,
+  "variant_profile": "medium-deterministic-random",
+  "variant_profile_description": "Use a medium-sized, diverse, deterministic pseudo-random-looking input. Do not depend on the current time or an unspecified random seed.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4426,
+    "completion_tokens": 1731,
+    "total_tokens": 6157
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:23:12.261091+00:00",
+  "source_file": "cpp_codes/ASCON_128_v1.cpp",
+  "source_relative_path": "ASCON_128_v1.cpp",
+  "source_sha256": "4e8106d84944f8f028040c8e02d89325cbcb7868942c0744044b2a7926253d29",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

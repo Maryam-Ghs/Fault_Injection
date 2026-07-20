@@ -1,0 +1,43 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T11:35:26.658648+00:00",
+  "request_started_at_utc": "2026-07-17T11:30:21.001556+00:00",
+  "duration_seconds": 305.651,
+  "source_file": "cpp_codes/ARIA_ECB_v9.cpp",
+  "source_relative_path": "ARIA_ECB_v9.cpp",
+  "source_sha256": "50611d11605d51a4f7b667f5e56fde35a6e3697326f26b6cf6b01e858c442afc",
+  "source_bytes": 9427,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ARIA_ECB_v9/ARIA_ECB_v9_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where permitted, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "request_id": "d1e37edc-cdab-4042-8889-e23f18e522d9",
+  "api_call_number_in_this_run": 73,
+  "variants_requested_in_same_call": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "batch_size": 9,
+  "batch_attempt": 2,
+  "split_depth": 0,
+  "finish_reason": "stop",
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage_for_whole_batch": {
+    "prompt_tokens": 8113,
+    "completion_tokens": 21455,
+    "total_tokens": 29568
+  }
+}

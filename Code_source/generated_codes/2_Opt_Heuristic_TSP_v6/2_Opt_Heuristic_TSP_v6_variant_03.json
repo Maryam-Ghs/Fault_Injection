@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T12:41:57.669399+00:00",
+  "request_started_at_utc": "2026-07-16T12:41:39.202697+00:00",
+  "duration_seconds": 18.467,
+  "source_file": "cpp_codes/2_Opt_Heuristic_TSP_v6.cpp",
+  "source_relative_path": "2_Opt_Heuristic_TSP_v6.cpp",
+  "source_sha256": "4f9ce502752972ae01ab85bc2f922243c4d05943e22fa907e625bdf1bc6c9c13",
+  "source_bytes": 4005,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/2_Opt_Heuristic_TSP_v6/2_Opt_Heuristic_TSP_v6_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4521,
+    "completion_tokens": 1646,
+    "total_tokens": 6167
+  }
+}

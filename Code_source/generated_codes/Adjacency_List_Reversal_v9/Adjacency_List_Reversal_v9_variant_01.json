@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:28:38.269782+00:00",
+  "request_started_at_utc": "2026-07-16T20:28:21.264303+00:00",
+  "duration_seconds": 17.006,
+  "source_file": "cpp_codes/Adjacency_List_Reversal_v9.cpp",
+  "source_relative_path": "Adjacency_List_Reversal_v9.cpp",
+  "source_sha256": "ec63e3acf02ec57d0aeb67f1f397c3a934a082dad6d3b1ae2637551f400fb659",
+  "source_bytes": 3097,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adjacency_List_Reversal_v9/Adjacency_List_Reversal_v9_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4176,
+    "completion_tokens": 1427,
+    "total_tokens": 5603
+  }
+}

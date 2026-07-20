@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T02:45:23.693729+00:00",
+  "request_started_at_utc": "2026-07-17T02:44:32.047181+00:00",
+  "duration_seconds": 51.647,
+  "source_file": "cpp_codes/AES_256_OFB_v10.cpp",
+  "source_relative_path": "AES_256_OFB_v10.cpp",
+  "source_sha256": "494f33094fb67ebe0f711d65922c3303889be6e9a092be9f44c994561d2f87d8",
+  "source_bytes": 13579,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AES_256_OFB_v10/AES_256_OFB_v10_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 7175,
+    "completion_tokens": 4488,
+    "total_tokens": 11663
+  }
+}

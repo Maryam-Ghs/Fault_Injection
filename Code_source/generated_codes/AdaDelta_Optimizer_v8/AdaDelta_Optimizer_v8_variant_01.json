@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T17:21:57.481965+00:00",
+  "request_started_at_utc": "2026-07-16T17:21:39.462923+00:00",
+  "duration_seconds": 18.019,
+  "source_file": "cpp_codes/AdaDelta_Optimizer_v8.cpp",
+  "source_relative_path": "AdaDelta_Optimizer_v8.cpp",
+  "source_sha256": "1ffad02f596d304c80fe3dc73187060e6a19fcbf74954717e2aa58b7364bb4fc",
+  "source_bytes": 3018,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AdaDelta_Optimizer_v8/AdaDelta_Optimizer_v8_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4613,
+    "completion_tokens": 1589,
+    "total_tokens": 6202
+  }
+}

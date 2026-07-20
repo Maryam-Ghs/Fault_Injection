@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T19:51:05.065258+00:00",
+  "request_started_at_utc": "2026-07-16T19:50:32.229411+00:00",
+  "duration_seconds": 32.836,
+  "source_file": "cpp_codes/Adaptive_Refinement_v10.cpp",
+  "source_relative_path": "Adaptive_Refinement_v10.cpp",
+  "source_sha256": "280e31a5784502c2eda09506717fd85ea98d98b45cf384a9835bcecd9f4286f3",
+  "source_bytes": 8825,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adaptive_Refinement_v10/Adaptive_Refinement_v10_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5247,
+    "completion_tokens": 2396,
+    "total_tokens": 7643
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T15:15:54.340012+00:00",
+  "request_started_at_utc": "2026-07-16T15:15:33.867634+00:00",
+  "duration_seconds": 20.472,
+  "source_file": "cpp_codes/3DES_OFB_v9.cpp",
+  "source_relative_path": "3DES_OFB_v9.cpp",
+  "source_sha256": "51db922759970938ffff79b41e241e6bf8b00136541deb0b8774b7ca9b2b2927",
+  "source_bytes": 4276,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/3DES_OFB_v9/3DES_OFB_v9_variant_08.cpp",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "variant_profile_description": "Use sparse, imbalanced, clustered, skewed, or mostly-empty input where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4757,
+    "completion_tokens": 1785,
+    "total_tokens": 6542
+  }
+}

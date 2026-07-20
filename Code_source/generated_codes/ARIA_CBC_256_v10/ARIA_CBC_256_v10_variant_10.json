@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T09:29:12.502732+00:00",
+  "request_started_at_utc": "2026-07-17T09:28:35.268358+00:00",
+  "duration_seconds": 37.234,
+  "source_file": "cpp_codes/ARIA_CBC_256_v10.cpp",
+  "source_relative_path": "ARIA_CBC_256_v10.cpp",
+  "source_sha256": "2ffc73bb4ab8029630fd9eaa63e49c651ccc28d3bac58b211f509c05e6ad68bd",
+  "source_bytes": 8266,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ARIA_CBC_256_v10/ARIA_CBC_256_v10_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the program's intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 6720,
+    "completion_tokens": 3532,
+    "total_tokens": 10252
+  }
+}

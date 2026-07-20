@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:31:17.271962+00:00",
+  "request_started_at_utc": "2026-07-16T20:31:03.121368+00:00",
+  "duration_seconds": 14.151,
+  "source_file": "cpp_codes/Adjacency_Matrix_Multiplication_for_Paths_v10.cpp",
+  "source_relative_path": "Adjacency_Matrix_Multiplication_for_Paths_v10.cpp",
+  "source_sha256": "5cd39d23fa52e1bf0a5bb14c230e7950a4aedc530dcc4c96648a8f784a781542",
+  "source_bytes": 1759,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adjacency_Matrix_Multiplication_for_Paths_v10/Adjacency_Matrix_Multiplication_for_Paths_v10_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 3937,
+    "completion_tokens": 775,
+    "total_tokens": 4712
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T18:49:44.237966+00:00",
+  "request_started_at_utc": "2026-07-16T18:49:26.145607+00:00",
+  "duration_seconds": 18.092,
+  "source_file": "cpp_codes/Adams_Moulton_Method_v5.cpp",
+  "source_relative_path": "Adams_Moulton_Method_v5.cpp",
+  "source_sha256": "07e0f6a52f6db86086cc442005a98f5da79b076cbeb5044349e0747d3dc473c9",
+  "source_bytes": 2190,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adams_Moulton_Method_v5/Adams_Moulton_Method_v5_variant_08.cpp",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "variant_profile_description": "Use sparse, imbalanced, clustered, skewed, or mostly-empty input where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4171,
+    "completion_tokens": 1660,
+    "total_tokens": 5831
+  }
+}

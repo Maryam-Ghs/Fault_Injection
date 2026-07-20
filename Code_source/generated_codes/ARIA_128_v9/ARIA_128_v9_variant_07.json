@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T08:28:25.814505+00:00",
+  "request_started_at_utc": "2026-07-17T08:27:46.427141+00:00",
+  "duration_seconds": 39.387,
+  "source_file": "cpp_codes/ARIA_128_v9.cpp",
+  "source_relative_path": "ARIA_128_v9.cpp",
+  "source_sha256": "337cdb884c8b2f589fdda9219bd96309ea118fc2640816ca7bd3793f1ae1b022",
+  "source_bytes": 7344,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ARIA_128_v9/ARIA_128_v9_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5708,
+    "completion_tokens": 2804,
+    "total_tokens": 8512
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T05:41:03.197592+00:00",
+  "request_started_at_utc": "2026-07-17T05:40:50.639513+00:00",
+  "duration_seconds": 12.558,
+  "source_file": "cpp_codes/AlphaCode_v1.cpp",
+  "source_relative_path": "AlphaCode_v1.cpp",
+  "source_sha256": "3b433a5924349eb23fbde31eb70db1e13981b7ee1acf780257e7cac7dbd28403",
+  "source_bytes": 1752,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AlphaCode_v1/AlphaCode_v1_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 3949,
+    "completion_tokens": 1130,
+    "total_tokens": 5079
+  }
+}

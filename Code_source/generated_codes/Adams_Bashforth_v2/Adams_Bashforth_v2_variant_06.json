@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T18:36:16.226193+00:00",
+  "request_started_at_utc": "2026-07-16T18:36:00.612340+00:00",
+  "duration_seconds": 15.614,
+  "source_file": "cpp_codes/Adams_Bashforth_v2.cpp",
+  "source_relative_path": "Adams_Bashforth_v2.cpp",
+  "source_sha256": "33afe60d710e1058aa9d868cdc10ca7231f8d5bc80e9b9515ea45a3be9352191",
+  "source_bytes": 3291,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adams_Bashforth_v2/Adams_Bashforth_v2_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4516,
+    "completion_tokens": 1405,
+    "total_tokens": 5921
+  }
+}

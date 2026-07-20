@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T19:26:16.403115+00:00",
+  "request_started_at_utc": "2026-07-16T19:25:56.369084+00:00",
+  "duration_seconds": 20.034,
+  "source_file": "cpp_codes/Adaptive_Control_v5.cpp",
+  "source_relative_path": "Adaptive_Control_v5.cpp",
+  "source_sha256": "c6465d46ae4800195397de3a873f0bedc3323cd84a2469cdfe381a77376a67e0",
+  "source_bytes": 3759,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adaptive_Control_v5/Adaptive_Control_v5_variant_05.cpp",
+  "variant_number": 5,
+  "variant_profile": "duplicate-heavy",
+  "variant_profile_description": "Use repeated values, ties, duplicate keys, or repeated patterns where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4477,
+    "completion_tokens": 1384,
+    "total_tokens": 5861
+  }
+}

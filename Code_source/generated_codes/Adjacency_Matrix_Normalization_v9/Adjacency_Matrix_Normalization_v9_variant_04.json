@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:49:00.960412+00:00",
+  "request_started_at_utc": "2026-07-16T20:48:47.789637+00:00",
+  "duration_seconds": 13.171,
+  "source_file": "cpp_codes/Adjacency_Matrix_Normalization_v9.cpp",
+  "source_relative_path": "Adjacency_Matrix_Normalization_v9.cpp",
+  "source_sha256": "52ea2a565923bb50e978ec3cab0d40fb0109547eb5647b25156045facd364d25",
+  "source_bytes": 3332,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adjacency_Matrix_Normalization_v9/Adjacency_Matrix_Normalization_v9_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4134,
+    "completion_tokens": 1114,
+    "total_tokens": 5248
+  }
+}

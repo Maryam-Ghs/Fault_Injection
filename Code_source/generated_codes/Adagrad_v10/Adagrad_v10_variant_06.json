@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T17:48:24.290068+00:00",
+  "request_started_at_utc": "2026-07-16T17:48:11.503447+00:00",
+  "duration_seconds": 12.787,
+  "source_file": "cpp_codes/Adagrad_v10.cpp",
+  "source_relative_path": "Adagrad_v10.cpp",
+  "source_sha256": "d5e57a18cbbd66f4a66aafcfd97978368a9105ddee919d219f7c5382e27d2c28",
+  "source_bytes": 2514,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adagrad_v10/Adagrad_v10_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4126,
+    "completion_tokens": 1155,
+    "total_tokens": 5281
+  }
+}

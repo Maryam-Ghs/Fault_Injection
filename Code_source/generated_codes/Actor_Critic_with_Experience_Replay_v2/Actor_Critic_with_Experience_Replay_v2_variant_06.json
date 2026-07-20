@@ -1,0 +1,35 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T09:57:26.168160+00:00",
+  "request_started_at_utc": "2026-07-17T09:56:38.594208+00:00",
+  "duration_seconds": 47.572,
+  "source_file": "cpp_codes/Actor_Critic_with_Experience_Replay_v2.cpp",
+  "source_relative_path": "Actor_Critic_with_Experience_Replay_v2.cpp",
+  "source_sha256": "c493407756649c7cf03a68b63ed001ac93b1fe28e1c5a79bb8dc6874f8ea39b1",
+  "source_bytes": 9354,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Actor_Critic_with_Experience_Replay_v2/Actor_Critic_with_Experience_Replay_v2_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "request_id": "bd0a0118-fbe3-48e5-8d43-38e720175b92",
+  "api_call_number_in_this_run": 2,
+  "variants_requested_in_same_call": [
+    6
+  ],
+  "batch_size": 1,
+  "batch_attempt": 1,
+  "split_depth": 0,
+  "finish_reason": "stop",
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage_for_whole_batch": {
+    "prompt_tokens": 5726,
+    "completion_tokens": 2693,
+    "total_tokens": 8419
+  }
+}

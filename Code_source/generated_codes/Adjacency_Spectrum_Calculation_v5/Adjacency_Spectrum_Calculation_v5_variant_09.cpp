@@ -1,0 +1,149 @@
+#include <iostream>
+#include <cmath>
+
+/* LLM input variant 9: medium-deterministic-random */
+
+int main() {
+    // ------------------------------------------------------------
+    // 1. Define graph size and allocate adjacency matrix on the heap
+    // ------------------------------------------------------------
+    int vertexCount = 6;
+    int totalSize = vertexCount * vertexCount;
+    float* adjacency = new float[totalSize];
+
+    // ------------------------------------------------------------
+    // 2. Fill adjacency matrix with a deterministic pseudo‑random graph
+    //    (undirected, weights in {1,2,3,4})
+    // ------------------------------------------------------------
+    for (int i = 0; i < vertexCount; ++i) {
+        for (int j = 0; j < vertexCount; ++j) {
+            if (i == j) {
+                adjacency[i * vertexCount + j] = 0.0f;
+            } else if (i < j) {
+                // deterministic weight based on indices
+                float w = static_cast<float>(((i + 1) * (j + 2)) % 4 + 1);
+                adjacency[i * vertexCount + j] = w;
+                adjacency[j * vertexCount + i] = w; // make symmetric
+            }
+        }
+    }
+
+    // ------------------------------------------------------------
+    // 3. Allocate working matrices for the QR iteration
+    // ------------------------------------------------------------
+    float* matrixA = new float[totalSize];   // copy of adjacency, will be updated
+    float* matrixQ = new float[totalSize];   // orthogonal factor
+    float* matrixR = new float[totalSize];   // upper‑triangular factor
+
+    // copy adjacency into matrixA
+    for (int i = 0; i < totalSize; ++i) {
+        matrixA[i] = adjacency[i];
+    }
+
+    // ------------------------------------------------------------
+    // 4. QR iteration parameters
+    // ------------------------------------------------------------
+    int maxIter = 120;          // number of QR steps
+    float tolerance = 1e-5f;    // not used for simplicity, fixed iterations
+
+    // ------------------------------------------------------------
+    // 5. Begin QR iterations (simple Gram‑Schmidt QR)
+    // ------------------------------------------------------------
+    for (int iter = 0; iter < maxIter; ++iter) {
+        // ---- 5.1 Initialise Q and R to zero ----
+        for (int i = 0; i < totalSize; ++i) {
+            matrixQ[i] = 0.0f;
+            matrixR[i] = 0.0f;
+        }
+
+        // ---- 5.2 Classical Gram‑Schmidt ----
+        // Columns of A are processed one by one
+        for (int col = 0; col < vertexCount; ++col) {
+            // copy current column of A into temporary vector v
+            float* v = new float[vertexCount];
+            for (int row = 0; row < vertexCount; ++row) {
+                v[row] = matrixA[row * vertexCount + col];
+            }
+
+            // orthogonalise against previous Q columns
+            for (int prev = 0; prev < col; ++prev) {
+                // compute dot product q_prev · v
+                float dotProd = 0.0f;
+                for (int k = 0; k < vertexCount; ++k) {
+                    dotProd += matrixQ[k * vertexCount + prev] * v[k];
+                }
+                // store in R[prev][col]
+                matrixR[prev * vertexCount + col] = dotProd;
+                // subtract projection
+                for (int k = 0; k < vertexCount; ++k) {
+                    v[k] -= dotProd * matrixQ[k * vertexCount + prev];
+                }
+            }
+
+            // compute norm of the orthogonalised vector
+            float normVal = 0.0f;
+            for (int k = 0; k < vertexCount; ++k) {
+                normVal += v[k] * v[k];
+            }
+            normVal = std::sqrt(normVal);
+
+            // store norm in R[col][col]
+            matrixR[col * vertexCount + col] = normVal;
+
+            // normalise to obtain Q column
+            for (int k = 0; k < vertexCount; ++k) {
+                if (normVal != 0.0f) {
+                    matrixQ[k * vertexCount + col] = v[k] / normVal;
+                } else {
+                    matrixQ[k * vertexCount + col] = 0.0f;
+                }
+            }
+
+            delete[] v; // free temporary vector
+        }
+
+        // ---- 5.3 Form the next A = R * Q ----
+        // temporary matrix to hold the product
+        float* nextA = new float[totalSize];
+        for (int i = 0; i < totalSize; ++i) {
+            nextA[i] = 0.0f;
+        }
+
+        // matrix multiplication: nextA = R * Q
+        for (int i = 0; i < vertexCount; ++i) {
+            for (int j = 0; j < vertexCount; ++j) {
+                float sumTmp = 0.0f;
+                for (int k = 0; k < vertexCount; ++k) {
+                    sumTmp += matrixR[i * vertexCount + k] * matrixQ[k * vertexCount + j];
+                }
+                nextA[i * vertexCount + j] = sumTmp;
+            }
+        }
+
+        // copy back into matrixA for the next iteration
+        for (int i = 0; i < totalSize; ++i) {
+            matrixA[i] = nextA[i];
+        }
+
+        delete[] nextA; // free the temporary product matrix
+    }
+
+    // ------------------------------------------------------------
+    // 6. Extract the diagonal of the final matrixA – these are the eigenvalues
+    // ------------------------------------------------------------
+    std::cout << "Adjacency spectrum (approximate eigenvalues):\n";
+    for (int i = 0; i < vertexCount; ++i) {
+        float eigenVal = matrixA[i * vertexCount + i];
+        std::cout << "  λ[" << i << "] = " << eigenVal << "\n";
+    }
+
+    // ------------------------------------------------------------
+    // 7. Clean up heap memory
+    // ------------------------------------------------------------
+    delete[] adjacency;
+    delete[] matrixA;
+    delete[] matrixQ;
+    delete[] matrixR;
+
+    return 0;
+}

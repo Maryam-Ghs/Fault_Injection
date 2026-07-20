@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T12:56:49.378629+00:00",
+  "request_started_at_utc": "2026-07-16T12:56:22.345293+00:00",
+  "duration_seconds": 27.033,
+  "source_file": "cpp_codes/2_SAT_Implication_Graph_v1.cpp",
+  "source_relative_path": "2_SAT_Implication_Graph_v1.cpp",
+  "source_sha256": "cdd4200e14487f1d09be4350921423a39e669fab87ee5f05a3312247feb3b866",
+  "source_bytes": 4014,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/2_SAT_Implication_Graph_v1/2_SAT_Implication_Graph_v1_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 2,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4529,
+    "completion_tokens": 2317,
+    "total_tokens": 6846
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T05:38:44.951885+00:00",
+  "request_started_at_utc": "2026-07-17T05:38:31.223262+00:00",
+  "duration_seconds": 13.729,
+  "source_file": "cpp_codes/All_Pairs_Vertex_Connectivity_v8.cpp",
+  "source_relative_path": "All_Pairs_Vertex_Connectivity_v8.cpp",
+  "source_sha256": "49f8ac1eb4eb191a55100d6d11888554b5e24c598dcf20bbe1fbd80b6206d958",
+  "source_bytes": 3737,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/All_Pairs_Vertex_Connectivity_v8/All_Pairs_Vertex_Connectivity_v8_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4459,
+    "completion_tokens": 1158,
+    "total_tokens": 5617
+  }
+}

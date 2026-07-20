@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T06:36:03.644090+00:00",
+  "request_started_at_utc": "2026-07-17T06:35:46.525321+00:00",
+  "duration_seconds": 17.119,
+  "source_file": "cpp_codes/Angle_at_Vertex_v4.cpp",
+  "source_relative_path": "Angle_at_Vertex_v4.cpp",
+  "source_sha256": "a59705b49e4345e51d497fbb6dbf3a3df78cd59172614d86849cbf1b49f5fdd3",
+  "source_bytes": 2102,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Angle_at_Vertex_v4/Angle_at_Vertex_v4_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the program's intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4131,
+    "completion_tokens": 1658,
+    "total_tokens": 5789
+  }
+}

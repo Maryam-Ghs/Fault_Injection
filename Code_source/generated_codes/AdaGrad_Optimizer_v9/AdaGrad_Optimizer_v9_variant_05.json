@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T17:46:59.445577+00:00",
+  "request_started_at_utc": "2026-07-16T17:46:40.769580+00:00",
+  "duration_seconds": 18.676,
+  "source_file": "cpp_codes/AdaGrad_Optimizer_v9.cpp",
+  "source_relative_path": "AdaGrad_Optimizer_v9.cpp",
+  "source_sha256": "9465d8eba74fa10c6fc1282f25519a885a40cff36ef393b4e5ac855c699aae5e",
+  "source_bytes": 4976,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AdaGrad_Optimizer_v9/AdaGrad_Optimizer_v9_variant_05.cpp",
+  "variant_number": 5,
+  "variant_profile": "duplicate-heavy",
+  "variant_profile_description": "Use repeated values, ties, duplicate keys, or repeated patterns where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4692,
+    "completion_tokens": 1656,
+    "total_tokens": 6348
+  }
+}

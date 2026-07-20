@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T18:47:50.839601+00:00",
+  "request_started_at_utc": "2026-07-16T18:47:33.169391+00:00",
+  "duration_seconds": 17.67,
+  "source_file": "cpp_codes/Adams_Moulton_Method_v4.cpp",
+  "source_relative_path": "Adams_Moulton_Method_v4.cpp",
+  "source_sha256": "7ff2275929df3ce45933093a8cd1b168b66e492e02b3d95723465f134996b04e",
+  "source_bytes": 2996,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adams_Moulton_Method_v4/Adams_Moulton_Method_v4_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4372,
+    "completion_tokens": 1456,
+    "total_tokens": 5828
+  }
+}

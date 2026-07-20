@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T15:35:56.592337+00:00",
+  "request_started_at_utc": "2026-07-16T15:35:27.491865+00:00",
+  "duration_seconds": 29.1,
+  "source_file": "cpp_codes/A2C_Advantage_Actor_Critic_v1.cpp",
+  "source_relative_path": "A2C_Advantage_Actor_Critic_v1.cpp",
+  "source_sha256": "ec56f7576edf844dcc51030c7d77452751351722e79e1f202205542351887f85",
+  "source_bytes": 9749,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/A2C_Advantage_Actor_Critic_v1/A2C_Advantage_Actor_Critic_v1_variant_08.cpp",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "variant_profile_description": "Use sparse, imbalanced, clustered, skewed, or mostly-empty input where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5440,
+    "completion_tokens": 2611,
+    "total_tokens": 8051
+  }
+}

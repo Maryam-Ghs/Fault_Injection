@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T05:09:40.289674+00:00",
+  "request_started_at_utc": "2026-07-17T05:09:27.773814+00:00",
+  "duration_seconds": 12.516,
+  "source_file": "cpp_codes/All_Pairs_Edge_Connectivity_v3.cpp",
+  "source_relative_path": "All_Pairs_Edge_Connectivity_v3.cpp",
+  "source_sha256": "449f4414056d6987b748aaa86bc2dd648430f89af32bdc6521e788c4f7ec4c79",
+  "source_bytes": 3216,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/All_Pairs_Edge_Connectivity_v3/All_Pairs_Edge_Connectivity_v3_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4202,
+    "completion_tokens": 1079,
+    "total_tokens": 5281
+  }
+}

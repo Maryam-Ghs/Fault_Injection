@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:51:16.046832+00:00",
+  "source_file": "cpp_codes/Backward_Differentiation_Formula_v5.cpp",
+  "source_relative_path": "Backward_Differentiation_Formula_v5.cpp",
+  "source_sha256": "ceeb9344d4095908e9a89dda5ad01d5d7ddc4e1196be2c5c74546cc620dc1084",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

@@ -1,0 +1,314 @@
+/*********************************************************************
+ * ARIA-ECB implementation – version #8
+ * ---------------------------------------------------------------
+ *  * Uses only int and float (no double, long, unsigned, const)
+ *  * Class‑based, stack‑allocated arrays, verbose step‑by‑step
+ *  * Input is generated inside main()
+ *  * Prints ciphertext of a single 16‑byte block in hexadecimal
+ *********************************************************************/
+
+#include <cstdio>
+#include <cstring>
+
+/* LLM input variant 2: small-diverse */
+
+/* -------------------------------------------------------------
+ * Simple left‑rotate for 32‑bit integers (sign‑extension is ignored)
+ * ------------------------------------------------------------- */
+int rotl32(int value, int shift) {
+    int left  = value << shift;
+    int right = value >> (32 - shift);
+    return left | right;
+}
+
+/* -------------------------------------------------------------
+ * ARIA substitution boxes (S1 and S2).  Values are stored as int.
+ * ------------------------------------------------------------- */
+int SBOX1[256] = {
+    0x63,0x7c,0x77,0x7b,0xf2,0x6b,0x6f,0xc5,0x30,0x01,0x67,0x2b,0xfe,0xd7,0xab,0x76,
+    0xca,0x82,0xc9,0x7d,0xfa,0x59,0x47,0xf0,0xad,0xd4,0xa2,0xaf,0x9c,0xa4,0x72,0xc0,
+    0xb7,0xfd,0x93,0x26,0x36,0x3f,0xf7,0xcc,0x34,0xa5,0xe5,0xf1,0x71,0xd8,0x31,0x15,
+    0x04,0xc7,0x23,0xc3,0x18,0x96,0x05,0x9a,0x07,0x12,0x80,0xe2,0xeb,0x27,0xb2,0x75,
+    0x09,0x83,0x2c,0x1a,0x1b,0x6e,0x5a,0xa0,0x52,0x3b,0xd6,0xb3,0x29,0xe3,0x2f,0x84,
+    0x53,0xd1,0x00,0xed,0x20,0xfc,0xb1,0x5b,0x6a,0xcb,0xbe,0x39,0x4a,0x4c,0x58,0xcf,
+    0xd0,0xef,0xaa,0xfb,0x43,0x4d,0x33,0x85,0x45,0xf9,0x02,0x7f,0x50,0x3c,0x9f,0xa8,
+    0x51,0xa3,0x40,0x8f,0x92,0x9d,0x38,0xf5,0xbc,0xb6,0xda,0x21,0x10,0xff,0xf3,0xd2,
+    0xcd,0x0c,0x13,0xec,0x5f,0x97,0x44,0x17,0xc4,0xa7,0x7e,0x3d,0x64,0x5d,0x19,0x73,
+    0x60,0x81,0x4f,0xdc,0x22,0x2a,0x90,0x88,0x46,0xee,0xb8,0x14,0xde,0x5e,0x0b,0xdb,
+    0xe0,0x32,0x3a,0x0a,0x49,0x06,0x24,0x5c,0xc2,0xd3,0xac,0x62,0x91,0x95,0xe4,0x79,
+    0xe7,0xc8,0x37,0x6d,0x8d,0xd5,0x4e,0xa9,0x6c,0x56,0xf4,0xea,0x65,0x7a,0xae,0x08,
+    0xba,0x78,0x25,0x2e,0x1c,0xa6,0xb4,0xc6,0xe8,0xdd,0x74,0x1f,0x4b,0xbd,0x8b,0x8a,
+    0x70,0x3e,0xb5,0x66,0x48,0x03,0xf6,0x0e,0x61,0x35,0x57,0xb9,0x86,0xc1,0x1d,0x9e,
+    0xe1,0xf8,0x98,0x11,0x69,0xd9,0x8e,0x94,0x9b,0x1e,0x87,0xe9,0xce,0x55,0x28,0xdf,
+    0x8c,0xa1,0x89,0x0d,0xbf,0xe6,0x42,0x68,0x41,0x99,0x2d,0x0f,0xb0,0x54,0xbb,0x16
+};
+
+int SBOX2[256] = {
+    0xe2,0x4e,0x54,0xfc,0x94,0x0b,0x5b,0x1a,0x11,0x1e,0x5a,0x0a,0x0f,0x30,0x36,0xa5,
+    0x38,0xbf,0x40,0xa3,0x9e,0x81,0xf3,0xd7,0xfb,0x7c,0xe3,0x39,0x82,0x9b,0x2f,0xff,
+    0x87,0x34,0x8e,0x43,0x44,0xc4,0xde,0xe9,0xcb,0x54,0x7b,0x94,0x32,0xa6,0xc2,0x23,
+    0x3d,0xee,0x4c,0x95,0x0d,0x0c,0x5f,0x5c,0x22,0x6f,0x47,0x5d,0x3b,0x5e,0x69,0x00,
+    0xe0,0x7d,0x0e,0x1b,0x3e,0x0d,0x04,0x61,0x7c,0xc1,0x6c,0xc5,0x6e,0xc7,0x83,0x4d,
+    0x94,0x60,0x0c,0xe0,0x2c,0x2a,0x55,0x24,0x74,0x39,0x5b,0x9d,0x15,0x5b,0x87,0x3b,
+    0x0c,0x6e,0x09,0x4b,0x5a,0x2c,0x48,0x3c,0x93,0x56,0xf5,0x5e,0x2b,0xb4,0x83,0x8b,
+    0x87,0x6f,0xe5,0x2c,0x4c,0x35,0x0c,0x4b,0xc7,0x99,0x0c,0x2a,0x63,0x68,0x7b,0x5f,
+    0x5c,0x3b,0xd7,0x5c,0x6b,0x2c,0x4f,0xcf,0x0b,0x12,0x48,0xd0,0x28,0x68,0x71,0x31,
+    0x8b,0x5b,0x71,0x27,0x95,0x3e,0x84,0x0c,0x3e,0x9c,0x0a,0x6e,0x6c,0x08,0x1b,0x0c,
+    0x2a,0x01,0x0b,0x1f,0x3e,0x0c,0x20,0x0b,0x3f,0x2a,0x3e,0x0c,0x7a,0x3f,0x2b,0x4c,
+    0x86,0x6b,0xe0,0x63,0x92,0x55,0x5d,0x09,0x9a,0x2b,0x57,0x3b,0x5f,0x2a,0x71,0x0b,
+    0x4e,0x6c,0x7c,0x2e,0x9b,0x4c,0x0d,0x4b,0x38,0x2d,0x5b,0x4c,0x23,0x46,0x5c,0x0c,
+    0x47,0x0d,0x16,0x9c,0x57,0x68,0x2d,0x0a,0x2e,0x2d,0x7c,0x9b,0x5b,0x2e,0x2c,0x5c,
+    0x1f,0x0c,0x7c,0x0e,0x16,0x5c,0x4d,0x2b,0x1a,0x5c,0x5b,0x0c,0x03,0x71,0x4d,0x5c,
+    0x5c,0x5c,0x0d,0x2b,0x5c,0x6c,0x5c,0x5c,0x5c,0x0c,0x5c,0x5b,0x5c,0x5c,0x5c,0x5c
+};
+
+/* -------------------------------------------------------------
+ * Round constants for 128‑bit key (12 rounds + 1 whitening)
+ * ------------------------------------------------------------- */
+int RC[13] = {
+    0x517cc1b7, 0x27220a94, 0xfe13abe8,
+    0x98a2ec1d, 0x2f6a764d, 0x2d8c2dfe,
+    0x2e2843c3, 0x8a4ae79d, 0x8d2c6d3b,
+    0xf5c6a1f0, 0x8c0e9c7b, 0x5c2c9f13,
+    0x345f4c57
+};
+
+/* -------------------------------------------------------------
+ * ARIA ECB class – all data lives on the stack
+ * ------------------------------------------------------------- */
+class ARIA_ECB {
+    int roundKey[13][4];          // 13 round keys (including whitening)
+
+    /* ---------------------------------------------------------
+     * Simple key schedule for 128‑bit key:
+     *   K0 = user key
+     *   Ki = rotl(Ki‑1, 1) XOR RCi‑1
+     * --------------------------------------------------------- */
+    void scheduleKey(const int *userKey) {
+        // K0
+        roundKey[0][0] = userKey[0];
+        roundKey[0][1] = userKey[1];
+        roundKey[0][2] = userKey[2];
+        roundKey[0][3] = userKey[3];
+
+        // Ki (i = 1 … 12)
+        int i = 1;
+        while (i <= 12) {
+            int tmp0 = roundKey[i-1][0];
+            int tmp1 = roundKey[i-1][1];
+            int tmp2 = roundKey[i-1][2];
+            int tmp3 = roundKey[i-1][3];
+
+            // rotate left by 1 bit
+            int rot0 = rotl32(tmp0, 1);
+            int rot1 = rotl32(tmp1, 1);
+            int rot2 = rotl32(tmp2, 1);
+            int rot3 = rotl32(tmp3, 1);
+
+            // XOR with round constant
+            roundKey[i][0] = rot0 ^ RC[i-1];
+            roundKey[i][1] = rot1 ^ RC[i-1];
+            roundKey[i][2] = rot2 ^ RC[i-1];
+            roundKey[i][3] = rot3 ^ RC[i-1];
+
+            i = i + 1;
+        }
+    }
+
+    /* ---------------------------------------------------------
+     * Byte‑wise substitution using S‑box 1
+     * --------------------------------------------------------- */
+    void subBytesS1(int *state) {
+        int idx = 0;
+        while (idx < 4) {
+            int w = state[idx];
+            int b0 = (w >> 24) & 0xFF;
+            int b1 = (w >> 16) & 0xFF;
+            int b2 = (w >> 8)  & 0xFF;
+            int b3 =  w        & 0xFF;
+
+            int sb0 = SBOX1[b0];
+            int sb1 = SBOX1[b1];
+            int sb2 = SBOX1[b2];
+            int sb3 = SBOX1[b3];
+
+            int neww = (sb0 << 24) | (sb1 << 16) | (sb2 << 8) | sb3;
+            state[idx] = neww;
+
+            idx = idx + 1;
+        }
+    }
+
+    /* ---------------------------------------------------------
+     * Byte‑wise substitution using S‑box 2
+     * --------------------------------------------------------- */
+    void subBytesS2(int *state) {
+        int idx = 0;
+        while (idx < 4) {
+            int w = state[idx];
+            int b0 = (w >> 24) & 0xFF;
+            int b1 = (w >> 16) & 0xFF;
+            int b2 = (w >> 8)  & 0xFF;
+            int b3 =  w        & 0xFF;
+
+            int sb0 = SBOX2[b0];
+            int sb1 = SBOX2[b1];
+            int sb2 = SBOX2[b2];
+            int sb3 = SBOX2[b3];
+
+            int neww = (sb0 << 24) | (sb1 << 16) | (sb2 << 8) | sb3;
+            state[idx] = neww;
+
+            idx = idx + 1;
+        }
+    }
+
+    /* ---------------------------------------------------------
+     * Linear diffusion layer – a simple rotation based mix
+     * --------------------------------------------------------- */
+    void diffusion(int *state) {
+        int tmp[4];
+        int i = 0;
+        while (i < 4) {
+            int a = state[i];
+            int b = state[(i+1) & 3];
+            int c = state[(i+2) & 3];
+            int d = state[(i+3) & 3];
+
+            int rotb = rotl32(b, 1);
+            int rotc = rotl32(c, 5);
+            int rotd = rotl32(d, 2);
+
+            tmp[i] = a ^ rotb ^ rotc ^ rotd;
+            i = i + 1;
+        }
+        // copy back
+        i = 0;
+        while (i < 4) {
+            state[i] = tmp[i];
+            i = i + 1;
+        }
+    }
+
+    /* ---------------------------------------------------------
+     * One round of ARIA: Substitution → Diffusion → AddRoundKey
+     * --------------------------------------------------------- */
+    void round(int *state, const int *rk, int roundNo) {
+        // Choose S‑box according to round number parity
+        if ((roundNo & 1) == 1) {
+            subBytesS1(state);
+        } else {
+            subBytesS2(state);
+        }
+
+        diffusion(state);
+
+        // Add round key (XOR)
+        int i = 0;
+        while (i < 4) {
+            state[i] = state[i] ^ rk[i];
+            i = i + 1;
+        }
+    }
+
+public:
+    /* ---------------------------------------------------------
+     * Public interface – encrypt a single 128‑bit block
+     * --------------------------------------------------------- */
+    void encryptBlock(const int *plain, int *cipher, const int *key) {
+        // 1) key schedule
+        scheduleKey(key);
+
+        // 2) load plaintext into local state
+        int state[4];
+        int i = 0;
+        while (i < 4) {
+            state[i] = plain[i];
+            i = i + 1;
+        }
+
+        // 3) initial whitening with K0
+        i = 0;
+        while (i < 4) {
+            state[i] = state[i] ^ roundKey[0][i];
+            i = i + 1;
+        }
+
+        // 4) 12 rounds
+        int r = 1;
+        while (r <= 12) {
+            round(state, roundKey[r], r);
+            r = r + 1;
+        }
+
+        // 5) final whitening with K13 (here K0 again for simplicity)
+        i = 0;
+        while (i < 4) {
+            state[i] = state[i] ^ roundKey[0][i];
+            i = i + 1;
+        }
+
+        // 6) write ciphertext
+        i = 0;
+        while (i < 4) {
+            cipher[i] = state[i];
+            i = i + 1;
+        }
+    }
+};
+
+/* -------------------------------------------------------------
+ * Helper: print 16‑byte block as hex
+ * ------------------------------------------------------------- */
+void printHexBlock(const int *block) {
+    int i = 0;
+    while (i < 4) {
+        int w = block[i];
+        int b0 = (w >> 24) & 0xFF;
+        int b1 = (w >> 16) & 0xFF;
+        int b2 = (w >> 8)  & 0xFF;
+        int b3 =  w        & 0xFF;
+
+        printf("%02x%02x%02x%02x ", b0, b1, b2, b3);
+        i = i + 1;
+    }
+    printf("\n");
+}
+
+/* -------------------------------------------------------------
+ * Main – generate key & plaintext internally, encrypt, print
+ * ------------------------------------------------------------- */
+int main() {
+    // 128‑bit key (small diverse values)
+    int myKey[4] = {
+        0x00000001,
+        0x00000002,
+        0x00000003,
+        0x00000004
+    };
+
+    // 128‑bit plaintext block (small diverse values)
+    int myPlain[4] = {
+        0x00000010,
+        0x00000020,
+        0x00000030,
+        0x00000040
+    };
+
+    // Buffer for ciphertext
+    int myCipher[4];
+    // Zero‑initialize (stack array)
+    memset(myCipher, 0, sizeof(myCipher));
+
+    // Create ARIA object and encrypt
+    ARIA_ECB aria;
+    aria.encryptBlock(myPlain, myCipher, myKey);
+
+    // Show results
+    printf("Plaintext : ");
+    printHexBlock(myPlain);
+    printf("Ciphertext: ");
+    printHexBlock(myCipher);
+
+    return 0;
+}

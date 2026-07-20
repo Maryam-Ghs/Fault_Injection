@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T03:55:06.851135+00:00",
+  "request_started_at_utc": "2026-07-17T03:54:49.932781+00:00",
+  "duration_seconds": 16.918,
+  "source_file": "cpp_codes/Affine_Transformation_3D_v7.cpp",
+  "source_relative_path": "Affine_Transformation_3D_v7.cpp",
+  "source_sha256": "6159b2ce43f68b03bd7019cd0edefad6fa02aeec119a5e1b558492df90eb2405",
+  "source_bytes": 3197,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Affine_Transformation_3D_v7/Affine_Transformation_3D_v7_variant_09.cpp",
+  "variant_number": 9,
+  "variant_profile": "medium-deterministic-random",
+  "variant_profile_description": "Use a medium-sized, diverse, deterministic pseudo-random-looking input. Do not depend on the current time or an unspecified random seed.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4514,
+    "completion_tokens": 1563,
+    "total_tokens": 6077
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T08:22:50.987512+00:00",
+  "request_started_at_utc": "2026-07-17T08:22:02.172854+00:00",
+  "duration_seconds": 48.815,
+  "source_file": "cpp_codes/ARIA_128_v8.cpp",
+  "source_relative_path": "ARIA_128_v8.cpp",
+  "source_sha256": "30a0b5ca77d70df5668fee1c10174127a16fe4c26cda8963f188569df9f84ea1",
+  "source_bytes": 7270,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ARIA_128_v8/ARIA_128_v8_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 2,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 7032,
+    "completion_tokens": 3880,
+    "total_tokens": 10912
+  }
+}

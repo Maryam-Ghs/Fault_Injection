@@ -1,0 +1,72 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+/* LLM input variant 6: ordered-structured */
+
+int main() {
+    // ------------ parameters (all on stack) ------------
+    const int stepCount = 51;          // symmetric number of points
+    const float stepSize = 0.1f;      // time step h
+
+    // ------------ storage arrays ------------
+    float tVals[stepCount];
+    float yVals[stepCount];
+    float fVals[stepCount];
+
+    // ------------ initial condition (symmetric about zero) ------------
+    tVals[0] = -2.5f;                                   // start time, symmetric range [-2.5, 2.5]
+    yVals[0] = std::exp(-tVals[0]);                     // y( -2.5 ) = e^{2.5}
+    fVals[0] = -yVals[0];                              // f = dy/dt = -y
+
+    // ------------ seed first three points with RK4 ------------
+    int idx = 0;
+    while (idx < 3) {
+        // k1
+        float k1 = fVals[idx];
+
+        // k2
+        float yTmp = yVals[idx] + 0.5f * stepSize * k1;
+        float k2 = -yTmp;
+
+        // k3
+        yTmp = yVals[idx] + 0.5f * stepSize * k2;
+        float k3 = -yTmp;
+
+        // k4
+        yTmp = yVals[idx] + stepSize * k3;
+        float k4 = -yTmp;
+
+        // next y
+        yVals[idx + 1] = yVals[idx] + (stepSize / 6.0f) * (k1 + 2.0f * k2 + 2.0f * k3 + k4);
+        tVals[idx + 1] = tVals[idx] + stepSize;
+        fVals[idx + 1] = -yVals[idx + 1];
+
+        ++idx;
+    }
+
+    // ------------ Adams‑Bashforth 4‑step loop ------------
+    while (idx < stepCount - 1) {
+        // compute increment using the 4‑step AB formula
+        float incr = (stepSize / 24.0f) *
+                     (55.0f * fVals[idx]
+                      - 59.0f * fVals[idx - 1]
+                      + 37.0f * fVals[idx - 2]
+                      - 9.0f * fVals[idx - 3]);
+
+        // advance solution
+        yVals[idx + 1] = yVals[idx] + incr;
+        tVals[idx + 1] = tVals[idx] + stepSize;
+        fVals[idx + 1] = -yVals[idx + 1];
+
+        ++idx;
+    }
+
+    // ------------ output results ------------
+    for (int i = 0; i < stepCount; ++i) {
+        std::cout << std::fixed << std::setprecision(6)
+                  << tVals[i] << " " << yVals[i] << "\n";
+    }
+
+    return 0;
+}

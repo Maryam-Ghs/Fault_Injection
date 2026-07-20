@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T17:26:42.229242+00:00",
+  "request_started_at_utc": "2026-07-16T17:26:25.774930+00:00",
+  "duration_seconds": 16.454,
+  "source_file": "cpp_codes/Adadelta_v3.cpp",
+  "source_relative_path": "Adadelta_v3.cpp",
+  "source_sha256": "684b191bcaf17bf5cf4b61e566f0f10315f69a4e963266c2457a2b1fb50862ad",
+  "source_bytes": 2966,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adadelta_v3/Adadelta_v3_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4311,
+    "completion_tokens": 1585,
+    "total_tokens": 5896
+  }
+}

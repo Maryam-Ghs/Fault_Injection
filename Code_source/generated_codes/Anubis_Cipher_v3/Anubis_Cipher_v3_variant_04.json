@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T07:18:04.283595+00:00",
+  "request_started_at_utc": "2026-07-17T07:17:23.958937+00:00",
+  "duration_seconds": 40.325,
+  "source_file": "cpp_codes/Anubis_Cipher_v3.cpp",
+  "source_relative_path": "Anubis_Cipher_v3.cpp",
+  "source_sha256": "d0fe9e2ec42453d5bafce34c286b76a7d8b2b151ee896e123d2e9b250cba233e",
+  "source_bytes": 8457,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Anubis_Cipher_v3/Anubis_Cipher_v3_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 6310,
+    "completion_tokens": 3712,
+    "total_tokens": 10022
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T21:58:07.602224+00:00",
+  "request_started_at_utc": "2026-07-16T21:57:28.471833+00:00",
+  "duration_seconds": 39.13,
+  "source_file": "cpp_codes/AES_128_CMAC_v6.cpp",
+  "source_relative_path": "AES_128_CMAC_v6.cpp",
+  "source_sha256": "7294922c5b920a5ed9b06ea24423ef630c1ac014d6efa071464c6b59a8460272",
+  "source_bytes": 9726,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AES_128_CMAC_v6/AES_128_CMAC_v6_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 6978,
+    "completion_tokens": 3699,
+    "total_tokens": 10677
+  }
+}

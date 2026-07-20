@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T05:29:06.720148+00:00",
+  "request_started_at_utc": "2026-07-17T05:28:46.036054+00:00",
+  "duration_seconds": 20.684,
+  "source_file": "cpp_codes/All_Pairs_Vertex_Connectivity_v1.cpp",
+  "source_relative_path": "All_Pairs_Vertex_Connectivity_v1.cpp",
+  "source_sha256": "5d2ba03ce06e088c52d503d20452878105757135c247a3bbcd26ee4275703aa9",
+  "source_bytes": 4760,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/All_Pairs_Vertex_Connectivity_v1/All_Pairs_Vertex_Connectivity_v1_variant_09.cpp",
+  "variant_number": 9,
+  "variant_profile": "medium-deterministic-random",
+  "variant_profile_description": "Use a medium-sized, diverse, deterministic pseudo-random-looking input. Do not depend on the current time or an unspecified random seed.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4736,
+    "completion_tokens": 1875,
+    "total_tokens": 6611
+  }
+}

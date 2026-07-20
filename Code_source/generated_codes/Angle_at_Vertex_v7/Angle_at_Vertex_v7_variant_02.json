@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T06:39:15.053974+00:00",
+  "request_started_at_utc": "2026-07-17T06:38:58.103205+00:00",
+  "duration_seconds": 16.951,
+  "source_file": "cpp_codes/Angle_at_Vertex_v7.cpp",
+  "source_relative_path": "Angle_at_Vertex_v7.cpp",
+  "source_sha256": "8588d408bd1fbb8a870970fffbbf8daea6e66428cea4fc01134bc7ed3b0f04df",
+  "source_bytes": 2675,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Angle_at_Vertex_v7/Angle_at_Vertex_v7_variant_02.cpp",
+  "variant_number": 2,
+  "variant_profile": "small-diverse",
+  "variant_profile_description": "Use a small input containing varied ordinary values and structures.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4355,
+    "completion_tokens": 1342,
+    "total_tokens": 5697
+  }
+}

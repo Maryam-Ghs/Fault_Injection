@@ -1,0 +1,124 @@
+// AmsGrad optimizer – version #3
+// -------------------------------------------------
+// Implements AmsGrad with manual loop unrolling, reordered arithmetic,
+// float‑only arithmetic, and std::vector storage.
+/* LLM input variant 2: small-diverse */
+
+#include <iostream>
+#include <vector>
+#include <cmath>
+
+class AmsGrad {
+public:
+    // hyper‑parameters (all float as required)
+    float lr;          // learning rate
+    float b1;          // beta1
+    float b2;          // beta2
+    float eps;         // epsilon to avoid division by zero
+
+    // state vectors
+    std::vector<float> m;      // first moment
+    std::vector<float> v;      // second moment
+    std::vector<float> v_max;  // max of v (v̂)
+
+    // constructor – allocate state vectors of given size
+    AmsGrad(int dim, float learning_rate, float beta1, float beta2, float epsilon) {
+        lr   = learning_rate;
+        b1   = beta1;
+        b2   = beta2;
+        eps  = epsilon;
+
+        m.assign(dim, 0.0f);
+        v.assign(dim, 0.0f);
+        v_max.assign(dim, 0.0f);
+    }
+
+    // single optimisation step
+    void step(std::vector<float>& param, const std::vector<float>& grad) {
+        int n = (int)param.size();
+
+        // pre‑compute (1‑beta) terms, reordered for readability
+        float one_minus_b1 = 1.0f - b1;
+        float one_minus_b2 = 1.0f - b2;
+
+        // manual loop unrolling – process 4 elements per iteration
+        int i = 0;
+        for (; i + 3 < n; i += 4) {
+            // ---- element i ----
+            float g0 = grad[i];
+            m[i] = b1 * m[i] + one_minus_b1 * g0;
+            v[i] = b2 * v[i] + one_minus_b2 * g0 * g0;
+            if (v[i] > v_max[i]) v_max[i] = v[i];
+            float denom0 = std::sqrt((float)v_max[i]) + eps;
+            param[i] = param[i] - lr * (m[i] / denom0);
+
+            // ---- element i+1 ----
+            float g1 = grad[i + 1];
+            m[i + 1] = b1 * m[i + 1] + one_minus_b1 * g1;
+            v[i + 1] = b2 * v[i + 1] + one_minus_b2 * g1 * g1;
+            if (v[i + 1] > v_max[i + 1]) v_max[i + 1] = v[i + 1];
+            float denom1 = std::sqrt((float)v_max[i + 1]) + eps;
+            param[i + 1] = param[i + 1] - lr * (m[i + 1] / denom1);
+
+            // ---- element i+2 ----
+            float g2 = grad[i + 2];
+            m[i + 2] = b1 * m[i + 2] + one_minus_b1 * g2;
+            v[i + 2] = b2 * v[i + 2] + one_minus_b2 * g2 * g2;
+            if (v[i + 2] > v_max[i + 2]) v_max[i + 2] = v[i + 2];
+            float denom2 = std::sqrt((float)v_max[i + 2]) + eps;
+            param[i + 2] = param[i + 2] - lr * (m[i + 2] / denom2);
+
+            // ---- element i+3 ----
+            float g3 = grad[i + 3];
+            m[i + 3] = b1 * m[i + 3] + one_minus_b1 * g3;
+            v[i + 3] = b2 * v[i + 3] + one_minus_b2 * g3 * g3;
+            if (v[i + 3] > v_max[i + 3]) v_max[i + 3] = v[i + 3];
+            float denom3 = std::sqrt((float)v_max[i + 3]) + eps;
+            param[i + 3] = param[i + 3] - lr * (m[i + 3] / denom3);
+        }
+
+        // tail loop for remaining elements (0‑3 of them)
+        for (; i < n; ++i) {
+            float g = grad[i];
+            m[i] = b1 * m[i] + one_minus_b1 * g;
+            v[i] = b2 * v[i] + one_minus_b2 * g * g;
+            if (v[i] > v_max[i]) v_max[i] = v[i];
+            float denom = std::sqrt((float)v_max[i]) + eps;
+            param[i] = param[i] - lr * (m[i] / denom);
+        }
+    }
+};
+
+int main() {
+    // -------------------------------------------------
+    // generate a small‑sized deterministic problem
+    // -------------------------------------------------
+    const int DIM = 5;                     // small size
+    std::vector<float> weights = { 0.5f, -0.3f, 0.0f, 1.2f, -0.8f };
+    std::vector<float> grads   = { -0.1f, 0.4f, -0.5f, 0.2f, 0.0f };
+
+    // print initial state
+    std::cout << "Initial parameters:\n";
+    for (int i = 0; i < DIM; ++i) {
+        std::cout << weights[i] << (i + 1 == DIM ? '\n' : ' ');
+    }
+
+    // create optimizer (learning rate 0.05, beta1 0.85, beta2 0.95, epsilon 1e-7)
+    AmsGrad optimiser(DIM, 0.05f, 0.85f, 0.95f, 1e-7f);
+
+    // perform a few optimisation steps
+    const int STEPS = 3;
+    for (int s = 0; s < STEPS; ++s) {
+        // in a real scenario grads would change each step;
+        // here we keep them constant for demonstration.
+        optimiser.step(weights, grads);
+    }
+
+    // print final state
+    std::cout << "\nParameters after " << STEPS << " AmsGrad steps:\n";
+    for (int i = 0; i < DIM; ++i) {
+        std::cout << weights[i] << (i + 1 == DIM ? '\n' : ' ');
+    }
+
+    return 0;
+}

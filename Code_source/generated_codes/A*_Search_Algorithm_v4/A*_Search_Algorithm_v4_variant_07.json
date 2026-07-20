@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T15:24:41.752269+00:00",
+  "request_started_at_utc": "2026-07-16T15:24:00.356933+00:00",
+  "duration_seconds": 41.395,
+  "source_file": "cpp_codes/A*_Search_Algorithm_v4.cpp",
+  "source_relative_path": "A*_Search_Algorithm_v4.cpp",
+  "source_sha256": "9033931867fe80d1e8f9a6754587b6b0712fbfe12445e5566adc795c34344d56",
+  "source_bytes": 5698,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/A*_Search_Algorithm_v4/A*_Search_Algorithm_v4_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5120,
+    "completion_tokens": 3680,
+    "total_tokens": 8800
+  }
+}

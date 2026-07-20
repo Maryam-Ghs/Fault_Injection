@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T12:45:17.987345+00:00",
+  "request_started_at_utc": "2026-07-16T12:44:53.412225+00:00",
+  "duration_seconds": 24.575,
+  "source_file": "cpp_codes/2_Opt_Heuristic_TSP_v8.cpp",
+  "source_relative_path": "2_Opt_Heuristic_TSP_v8.cpp",
+  "source_sha256": "5075931ac636ec0f8bfd4676d35d9693ba381f469a62fdce34e034e6b59b2716",
+  "source_bytes": 5145,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/2_Opt_Heuristic_TSP_v8/2_Opt_Heuristic_TSP_v8_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5263,
+    "completion_tokens": 2120,
+    "total_tokens": 7383
+  }
+}

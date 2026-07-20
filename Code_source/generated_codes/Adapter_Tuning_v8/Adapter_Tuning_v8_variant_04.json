@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T19:21:09.343303+00:00",
+  "request_started_at_utc": "2026-07-16T19:20:52.114308+00:00",
+  "duration_seconds": 17.229,
+  "source_file": "cpp_codes/Adapter_Tuning_v8.cpp",
+  "source_relative_path": "Adapter_Tuning_v8.cpp",
+  "source_sha256": "35fea47920594b3f133032d0df098ff1710a1d4bdaf9e98121e08b0b826693b4",
+  "source_bytes": 2896,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adapter_Tuning_v8/Adapter_Tuning_v8_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4238,
+    "completion_tokens": 1312,
+    "total_tokens": 5550
+  }
+}

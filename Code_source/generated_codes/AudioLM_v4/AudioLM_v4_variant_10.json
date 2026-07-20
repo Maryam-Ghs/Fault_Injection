@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:33:07.151553+00:00",
+  "source_file": "cpp_codes/AudioLM_v4.cpp",
+  "source_relative_path": "AudioLM_v4.cpp",
+  "source_sha256": "9219f98ed657e489c3fb47c421ae467c82ae4d66e8ec77d253a5ff751d35b853",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

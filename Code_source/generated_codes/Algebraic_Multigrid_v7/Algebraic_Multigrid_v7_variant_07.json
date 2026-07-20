@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T04:55:33.044017+00:00",
+  "request_started_at_utc": "2026-07-17T04:54:59.490612+00:00",
+  "duration_seconds": 33.553,
+  "source_file": "cpp_codes/Algebraic_Multigrid_v7.cpp",
+  "source_relative_path": "Algebraic_Multigrid_v7.cpp",
+  "source_sha256": "808528ccd86ce5f69ff5d3a55e5df0d86c374f62ce5ba96c18a3f668a668ea26",
+  "source_bytes": 11028,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Algebraic_Multigrid_v7/Algebraic_Multigrid_v7_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5832,
+    "completion_tokens": 3031,
+    "total_tokens": 8863
+  }
+}

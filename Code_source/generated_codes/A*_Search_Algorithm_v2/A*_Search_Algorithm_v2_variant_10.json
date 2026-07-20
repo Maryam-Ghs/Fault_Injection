@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T15:20:01.000053+00:00",
+  "request_started_at_utc": "2026-07-16T15:19:40.371180+00:00",
+  "duration_seconds": 20.629,
+  "source_file": "cpp_codes/A*_Search_Algorithm_v2.cpp",
+  "source_relative_path": "A*_Search_Algorithm_v2.cpp",
+  "source_sha256": "711ec09298ecd2713d870580dfe411191353cf3df835a7ad811c71825a21fd44",
+  "source_bytes": 4871,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/A*_Search_Algorithm_v2/A*_Search_Algorithm_v2_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the program's intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4873,
+    "completion_tokens": 1970,
+    "total_tokens": 6843
+  }
+}

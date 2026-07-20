@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T03:33:24.020931+00:00",
+  "request_started_at_utc": "2026-07-17T03:33:09.867918+00:00",
+  "duration_seconds": 14.153,
+  "source_file": "cpp_codes/Affine_Transformation_2D_v10.cpp",
+  "source_relative_path": "Affine_Transformation_2D_v10.cpp",
+  "source_sha256": "12c5b13555bcdcb1f698ebba854a05cb1f963d498804fb71bee8608bdd0df4ee",
+  "source_bytes": 1652,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Affine_Transformation_2D_v10/Affine_Transformation_2D_v10_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 2,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4033,
+    "completion_tokens": 1211,
+    "total_tokens": 5244
+  }
+}

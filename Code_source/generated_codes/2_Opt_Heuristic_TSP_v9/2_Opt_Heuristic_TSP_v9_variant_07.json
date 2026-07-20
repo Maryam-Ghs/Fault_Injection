@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T12:55:18.570017+00:00",
+  "request_started_at_utc": "2026-07-16T12:54:50.836774+00:00",
+  "duration_seconds": 27.733,
+  "source_file": "cpp_codes/2_Opt_Heuristic_TSP_v9.cpp",
+  "source_relative_path": "2_Opt_Heuristic_TSP_v9.cpp",
+  "source_sha256": "ed393620cc7501459ef0e30727bc268d125fdc2f7573df52ce6089792ffcf932",
+  "source_bytes": 7423,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/2_Opt_Heuristic_TSP_v9/2_Opt_Heuristic_TSP_v9_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5002,
+    "completion_tokens": 2572,
+    "total_tokens": 7574
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:20:04.789216+00:00",
+  "source_file": "cpp_codes/Articulation_Points_Tarjan’s_Algorithm_v4.cpp",
+  "source_relative_path": "Articulation_Points_Tarjan’s_Algorithm_v4.cpp",
+  "source_sha256": "9871bafc3c04343dcd51582f1136ed611287323e7e22c2a6901c62c83868e0c1",
+  "variant_number": 9,
+  "variant_profile": "medium-deterministic-random",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

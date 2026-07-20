@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T06:49:58.235148+00:00",
+  "request_started_at_utc": "2026-07-17T06:49:42.712839+00:00",
+  "duration_seconds": 15.522,
+  "source_file": "cpp_codes/Angle_Between_Two_Vectors_v9.cpp",
+  "source_relative_path": "Angle_Between_Two_Vectors_v9.cpp",
+  "source_sha256": "7a95b6620e58c08c59c260f277a25173c5cb17834ed9a9df7a180ead125cc178",
+  "source_bytes": 3450,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Angle_Between_Two_Vectors_v9/Angle_Between_Two_Vectors_v9_variant_05.cpp",
+  "variant_number": 5,
+  "variant_profile": "duplicate-heavy",
+  "variant_profile_description": "Use repeated values, ties, duplicate keys, or repeated patterns where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4372,
+    "completion_tokens": 1393,
+    "total_tokens": 5765
+  }
+}

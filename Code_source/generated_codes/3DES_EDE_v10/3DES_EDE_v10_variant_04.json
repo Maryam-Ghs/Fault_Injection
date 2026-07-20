@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T14:43:22.097704+00:00",
+  "request_started_at_utc": "2026-07-16T14:42:26.242290+00:00",
+  "duration_seconds": 55.855,
+  "source_file": "cpp_codes/3DES_EDE_v10.cpp",
+  "source_relative_path": "3DES_EDE_v10.cpp",
+  "source_sha256": "67be5eb54154dc763de77868d338d1d871a64d2524a2dd5c379e781546ce2229",
+  "source_bytes": 9803,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/3DES_EDE_v10/3DES_EDE_v10_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 8034,
+    "completion_tokens": 5319,
+    "total_tokens": 13353
+  }
+}

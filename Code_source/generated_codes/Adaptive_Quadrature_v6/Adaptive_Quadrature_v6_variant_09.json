@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T19:45:36.817771+00:00",
+  "request_started_at_utc": "2026-07-16T19:45:04.271036+00:00",
+  "duration_seconds": 32.547,
+  "source_file": "cpp_codes/Adaptive_Quadrature_v6.cpp",
+  "source_relative_path": "Adaptive_Quadrature_v6.cpp",
+  "source_sha256": "f097331c102daed65d09b3389ca35d4295cedca44bb5288d39928e93e9e3ad8d",
+  "source_bytes": 8894,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adaptive_Quadrature_v6/Adaptive_Quadrature_v6_variant_09.cpp",
+  "variant_number": 9,
+  "variant_profile": "medium-deterministic-random",
+  "variant_profile_description": "Use a medium-sized, diverse, deterministic pseudo-random-looking input. Do not depend on the current time or an unspecified random seed.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5305,
+    "completion_tokens": 2546,
+    "total_tokens": 7851
+  }
+}

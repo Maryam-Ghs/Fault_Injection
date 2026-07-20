@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T18:22:11.924682+00:00",
+  "request_started_at_utc": "2026-07-16T18:21:58.553521+00:00",
+  "duration_seconds": 13.371,
+  "source_file": "cpp_codes/AdaMax_v8.cpp",
+  "source_relative_path": "AdaMax_v8.cpp",
+  "source_sha256": "b544ec5c8aafb5c99d3c84a8a4cd9d7b261904abe40331f564a446875ede4fd3",
+  "source_bytes": 3610,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AdaMax_v8/AdaMax_v8_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the program's intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4413,
+    "completion_tokens": 1323,
+    "total_tokens": 5736
+  }
+}

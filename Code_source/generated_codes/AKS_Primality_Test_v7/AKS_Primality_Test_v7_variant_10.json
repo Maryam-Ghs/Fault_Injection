@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T04:23:13.592667+00:00",
+  "request_started_at_utc": "2026-07-17T04:22:55.722628+00:00",
+  "duration_seconds": 17.87,
+  "source_file": "cpp_codes/AKS_Primality_Test_v7.cpp",
+  "source_relative_path": "AKS_Primality_Test_v7.cpp",
+  "source_sha256": "1438f04f84042906c941e986919c508c56e94c1c4ea8421402399700f1ff6b23",
+  "source_bytes": 4926,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AKS_Primality_Test_v7/AKS_Primality_Test_v7_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the program's intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4984,
+    "completion_tokens": 2000,
+    "total_tokens": 6984
+  }
+}

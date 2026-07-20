@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:44:16.350160+00:00",
+  "source_file": "cpp_codes/Backpropagation_v9.cpp",
+  "source_relative_path": "Backpropagation_v9.cpp",
+  "source_sha256": "31eadb0fb0331298acf74783dc3bc9944ec36df244268622443c8adf0a0d234f",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

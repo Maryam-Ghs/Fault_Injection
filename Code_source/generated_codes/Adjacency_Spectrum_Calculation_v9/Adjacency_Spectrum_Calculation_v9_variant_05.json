@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T21:01:36.251226+00:00",
+  "request_started_at_utc": "2026-07-16T21:01:13.728252+00:00",
+  "duration_seconds": 22.523,
+  "source_file": "cpp_codes/Adjacency_Spectrum_Calculation_v9.cpp",
+  "source_relative_path": "Adjacency_Spectrum_Calculation_v9.cpp",
+  "source_sha256": "c9af8b5426267ede124d560d578e67c7e462292bc19ac0c91ceeaf44c9efa8d4",
+  "source_bytes": 7505,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adjacency_Spectrum_Calculation_v9/Adjacency_Spectrum_Calculation_v9_variant_05.cpp",
+  "variant_number": 5,
+  "variant_profile": "duplicate-heavy",
+  "variant_profile_description": "Use repeated values, ties, duplicate keys, or repeated patterns where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5112,
+    "completion_tokens": 2014,
+    "total_tokens": 7126
+  }
+}

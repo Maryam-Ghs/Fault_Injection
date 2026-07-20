@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T21:54:37.388313+00:00",
+  "request_started_at_utc": "2026-07-16T21:53:39.764041+00:00",
+  "duration_seconds": 57.624,
+  "source_file": "cpp_codes/AES_128_CMAC_v3.cpp",
+  "source_relative_path": "AES_128_CMAC_v3.cpp",
+  "source_sha256": "8d39259fad46475cea6aded6205dd6c188592a33f5abcbd4fb580a7bedfaf10e",
+  "source_bytes": 10863,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AES_128_CMAC_v3/AES_128_CMAC_v3_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 7649,
+    "completion_tokens": 5278,
+    "total_tokens": 12927
+  }
+}

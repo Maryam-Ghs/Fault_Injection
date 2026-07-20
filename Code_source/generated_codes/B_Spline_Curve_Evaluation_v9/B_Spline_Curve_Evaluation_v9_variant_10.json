@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:40:43.863615+00:00",
+  "source_file": "cpp_codes/B_Spline_Curve_Evaluation_v9.cpp",
+  "source_relative_path": "B_Spline_Curve_Evaluation_v9.cpp",
+  "source_sha256": "b616dbf699e1e7fe46288e1391a36ec4ca8c5ef51f438edf7bb2affb0db5f94b",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

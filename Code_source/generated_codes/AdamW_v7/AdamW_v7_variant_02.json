@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T19:10:35.993585+00:00",
+  "request_started_at_utc": "2026-07-16T19:10:19.250768+00:00",
+  "duration_seconds": 16.743,
+  "source_file": "cpp_codes/AdamW_v7.cpp",
+  "source_relative_path": "AdamW_v7.cpp",
+  "source_sha256": "ea48c3ac410db6ff2bc479807f40b02a5c314b13eaf5396741d3a41518f04dae",
+  "source_bytes": 3286,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AdamW_v7/AdamW_v7_variant_02.cpp",
+  "variant_number": 2,
+  "variant_profile": "small-diverse",
+  "variant_profile_description": "Use a small input containing varied ordinary values and structures.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4590,
+    "completion_tokens": 1466,
+    "total_tokens": 6056
+  }
+}

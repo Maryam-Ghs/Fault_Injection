@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T05:17:39.504765+00:00",
+  "request_started_at_utc": "2026-07-17T05:17:19.627462+00:00",
+  "duration_seconds": 19.877,
+  "source_file": "cpp_codes/All_Pairs_Shortest_Path_via_Repeated_Dijkstra_v10.cpp",
+  "source_relative_path": "All_Pairs_Shortest_Path_via_Repeated_Dijkstra_v10.cpp",
+  "source_sha256": "314762979355c500176652c90c9525f04d1c2a0b84bfc7aa7bdd1e261af470d5",
+  "source_bytes": 5725,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/All_Pairs_Shortest_Path_via_Repeated_Dijkstra_v10/All_Pairs_Shortest_Path_via_Repeated_Dijkstra_v10_variant_08.cpp",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "variant_profile_description": "Use sparse, imbalanced, clustered, skewed, or mostly-empty input where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4765,
+    "completion_tokens": 1799,
+    "total_tokens": 6564
+  }
+}

@@ -1,0 +1,248 @@
+/* LLM input variant 8: sparse-skewed */
+// 2‑SAT Implication Graph – version #3
+// Edge‑case heavy internal test, manual loop unrolling, heap arrays, class‑based.
+
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+
+// Simple dynamic adjacency list stored on the heap
+struct EdgeList {
+    int *to;      // destination vertices
+    int  cnt;     // current number of edges
+    int  cap;     // allocated capacity
+};
+
+// 2‑SAT solver class
+class TwoSatSolver {
+    int   varN;          // number of variables
+    int   nodeN;         // 2 * varN
+    EdgeList *g;         // implication graph
+    EdgeList *rg;        // reverse graph
+    int   *orderArr;     // order of vertices (first pass)
+    int    orderPos;     // position in orderArr
+    int   *compArr;      // component id for each vertex
+    int   *stk;          // manual stack for DFS
+    int    stkTop;       // stack pointer
+    int   *assign;       // final assignment (0/1)
+
+public:
+    TwoSatSolver(int v) {
+        varN   = v;
+        nodeN  = v * 2;
+        g      = new EdgeList[nodeN];
+        rg     = new EdgeList[nodeN];
+        int i = 0;
+        while (i < nodeN) {
+            g[i].to  = nullptr; g[i].cnt = 0; g[i].cap = 0;
+            rg[i].to = nullptr; rg[i].cnt = 0; rg[i].cap = 0;
+            i = i + 1;
+        }
+        orderArr = new int[nodeN];
+        compArr  = new int[nodeN];
+        stk      = new int[nodeN];
+        assign   = new int[varN];
+    }
+
+    ~TwoSatSolver() {
+        int i = 0;
+        while (i < nodeN) {
+            if (g[i].to)  delete [] g[i].to;
+            if (rg[i].to) delete [] rg[i].to;
+            i = i + 1;
+        }
+        delete [] g;
+        delete [] rg;
+        delete [] orderArr;
+        delete [] compArr;
+        delete [] stk;
+        delete [] assign;
+    }
+
+    // literal encoding: x = 2*var + (val ? 1 : 0)
+    // val = 1 → true, val = 0 → false
+    int lit(int var, int val) {
+        int res = var * 2 + val;
+        return res;
+    }
+
+    // negation of a literal
+    int neg(int l) {
+        int res = l ^ 1;
+        return res;
+    }
+
+    // ensure capacity for adjacency list
+    void ensureCap(EdgeList &e) {
+        if (e.cnt == e.cap) {
+            int newCap = e.cap + 4;                 // small growth factor
+            int *newArr = new int[newCap];
+            int j = 0;
+            while (j < e.cnt) {
+                newArr[j] = e.to[j];
+                j = j + 1;
+            }
+            if (e.to) delete [] e.to;
+            e.to  = newArr;
+            e.cap = newCap;
+        }
+    }
+
+    // add directed edge u → v
+    void addImp(int u, int v) {
+        ensureCap(g[u]);
+        g[u].to[g[u].cnt] = v;
+        g[u].cnt = g[u].cnt + 1;
+
+        ensureCap(rg[v]);
+        rg[v].to[rg[v].cnt] = u;
+        rg[v].cnt = rg[v].cnt + 1;
+    }
+
+    // add clause (a ∨ b)
+    void addOr(int aVar, int aVal, int bVar, int bVal) {
+        int aLit = lit(aVar, aVal);
+        int bLit = lit(bVar, bVal);
+        // ¬a → b
+        addImp(neg(aLit), bLit);
+        // ¬b → a
+        addImp(neg(bLit), aLit);
+    }
+
+    // first DFS pass (fill orderArr)
+    void dfs1(int v) {
+        compArr[v] = -1;               // reuse compArr as visited marker
+        int i = 0;
+        while (i < g[v].cnt) {
+            int to = g[v].to[i];
+            if (compArr[to] == -2) {   // -2 means unvisited
+                dfs1(to);
+            }
+            i = i + 1;
+        }
+        orderArr[orderPos] = v;
+        orderPos = orderPos + 1;
+    }
+
+    // second DFS pass (assign components)
+    void dfs2(int v, int label) {
+        compArr[v] = label;
+        // manual loop unrolling for neighbours of reverse graph
+        int i = 0;
+        int cnt = rg[v].cnt;
+        while (i + 1 < cnt) {
+            int to1 = rg[v].to[i];
+            int to2 = rg[v].to[i + 1];
+            if (compArr[to1] == -2) dfs2(to1, label);
+            if (compArr[to2] == -2) dfs2(to2, label);
+            i = i + 2;
+        }
+        if (i < cnt) {
+            int to = rg[v].to[i];
+            if (compArr[to] == -2) dfs2(to, label);
+        }
+    }
+
+    // solve and fill assign[], return true if satisfiable
+    bool solve() {
+        // initialise visited markers
+        int i = 0;
+        while (i < nodeN) {
+            compArr[i] = -2;          // -2 = unvisited
+            i = i + 1;
+        }
+        orderPos = 0;
+        // first pass
+        i = 0;
+        while (i < nodeN) {
+            if (compArr[i] == -2) dfs1(i);
+            i = i + 1;
+        }
+        // second pass
+        int label = 0;
+        i = nodeN - 1;
+        while (i >= 0) {
+            int v = orderArr[i];
+            if (compArr[v] == -2) {
+                dfs2(v, label);
+                label = label + 1;
+            }
+            i = i - 1;
+        }
+        // check for contradictions
+        i = 0;
+        while (i < varN) {
+            if (compArr[2*i] == compArr[2*i + 1]) return false;
+            // variable is true if component of true literal > component of false literal
+            assign[i] = compArr[2*i] < compArr[2*i + 1];
+            i = i + 1;
+        }
+        return true;
+    }
+
+    // print result
+    void printResult() {
+        if (solve()) {
+            std::printf("SAT\n");
+            int i = 0;
+            while (i < varN) {
+                std::printf("x%d = %d\n", i, assign[i]);
+                i = i + 1;
+            }
+        } else {
+            std::printf("UNSAT\n");
+        }
+    }
+};
+
+int main() {
+    // 1) Empty formula (should be SAT)
+    {
+        TwoSatSolver solver0(0);
+        solver0.printResult();                     // expect SAT (trivial)
+    }
+
+    // 2) Sparse large instance: many variables, very few clauses
+    {
+        const int V = 1000;                       // many variables
+        TwoSatSolver solverSparse(V);
+        // Only three clauses involving the first three variables
+        // (x0 ∨ x1) ∧ (¬x1 ∨ x2) ∧ (¬x2 ∨ x0)
+        solverSparse.addOr(0, 1, 1, 1);
+        solverSparse.addOr(1, 0, 2, 1);
+        solverSparse.addOr(2, 0, 0, 1);
+        solverSparse.printResult();                // expect SAT
+    }
+
+    // 3) Sparse contradictory instance (UNSAT)
+    {
+        const int V = 5;
+        TwoSatSolver solverContradict(V);
+        // Force x0 true and false with minimal clauses
+        solverContradict.addOr(0, 1, 0, 1);   // (x0 ∨ x0) → x0 true
+        solverContradict.addOr(0, 0, 0, 0);   // (¬x0 ∨ ¬x0) → x0 false
+        solverContradict.printResult();      // expect UNSAT
+    }
+
+    // 4) Skewed clustering: many variables, but only a few dense clusters
+    {
+        const int V = 200;
+        TwoSatSolver solverCluster(V);
+        // Cluster A: variables 0‑4 densely connected
+        for (int i = 0; i < 5; ++i) {
+            for (int j = 0; j < 5; ++j) {
+                if (i != j) {
+                    solverCluster.addOr(i, 1, j, 0); // (xi ∨ ¬xj)
+                }
+            }
+        }
+        // Cluster B: variables 50‑52 with a simple cycle
+        solverCluster.addOr(50, 1, 51, 1);
+        solverCluster.addOr(51, 0, 52, 0);
+        solverCluster.addOr(52, 1, 50, 0);
+        // Rest of the variables (6‑199) remain isolated (no clauses)
+        solverCluster.printResult();          // should be SAT
+    }
+
+    return 0;
+}

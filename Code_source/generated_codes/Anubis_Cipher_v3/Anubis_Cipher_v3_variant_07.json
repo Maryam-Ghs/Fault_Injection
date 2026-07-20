@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T07:19:09.226803+00:00",
+  "request_started_at_utc": "2026-07-17T07:18:34.304348+00:00",
+  "duration_seconds": 34.922,
+  "source_file": "cpp_codes/Anubis_Cipher_v3.cpp",
+  "source_relative_path": "Anubis_Cipher_v3.cpp",
+  "source_sha256": "d0fe9e2ec42453d5bafce34c286b76a7d8b2b151ee896e123d2e9b250cba233e",
+  "source_bytes": 8457,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Anubis_Cipher_v3/Anubis_Cipher_v3_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 6311,
+    "completion_tokens": 3112,
+    "total_tokens": 9423
+  }
+}

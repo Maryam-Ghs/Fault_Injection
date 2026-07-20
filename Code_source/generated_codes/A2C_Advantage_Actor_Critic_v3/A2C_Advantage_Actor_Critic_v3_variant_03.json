@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T15:39:44.978154+00:00",
+  "request_started_at_utc": "2026-07-16T15:39:25.915046+00:00",
+  "duration_seconds": 19.063,
+  "source_file": "cpp_codes/A2C_Advantage_Actor_Critic_v3.cpp",
+  "source_relative_path": "A2C_Advantage_Actor_Critic_v3.cpp",
+  "source_sha256": "b21b56f2023bb420c72c00b2d9e77cb57145c6814ca53e8351d7e42300fc0475",
+  "source_bytes": 4037,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/A2C_Advantage_Actor_Critic_v3/A2C_Advantage_Actor_Critic_v3_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 2,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4697,
+    "completion_tokens": 1640,
+    "total_tokens": 6337
+  }
+}

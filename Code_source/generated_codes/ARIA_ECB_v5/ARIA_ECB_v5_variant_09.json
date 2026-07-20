@@ -1,0 +1,39 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T11:11:50.183012+00:00",
+  "request_started_at_utc": "2026-07-17T11:05:40.451292+00:00",
+  "duration_seconds": 369.726,
+  "source_file": "cpp_codes/ARIA_ECB_v5.cpp",
+  "source_relative_path": "ARIA_ECB_v5.cpp",
+  "source_sha256": "78824aef45dd2a341c17cc3de95198f8bae7d4e7fc0fde6c79f6f6d1e0677c35",
+  "source_bytes": 9050,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ARIA_ECB_v5/ARIA_ECB_v5_variant_09.cpp",
+  "variant_number": 9,
+  "variant_profile": "medium-deterministic-random",
+  "variant_profile_description": "Use medium-sized, diverse, deterministic pseudo-random-looking input. Do not depend on time or an unspecified random seed.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "request_id": "1858c1ce-fad8-486a-beeb-352bf725d142",
+  "api_call_number_in_this_run": 61,
+  "variants_requested_in_same_call": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "batch_size": 5,
+  "batch_attempt": 2,
+  "split_depth": 0,
+  "finish_reason": "stop",
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage_for_whole_batch": {
+    "prompt_tokens": 7879,
+    "completion_tokens": 20296,
+    "total_tokens": 28175
+  }
+}

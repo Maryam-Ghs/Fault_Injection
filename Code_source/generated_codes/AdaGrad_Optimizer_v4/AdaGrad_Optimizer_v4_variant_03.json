@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T17:39:32.179113+00:00",
+  "request_started_at_utc": "2026-07-16T17:39:20.755354+00:00",
+  "duration_seconds": 11.424,
+  "source_file": "cpp_codes/AdaGrad_Optimizer_v4.cpp",
+  "source_relative_path": "AdaGrad_Optimizer_v4.cpp",
+  "source_sha256": "1ef3f9c4e3c4d1cfa9f6536d4d925b661bfef927bbde5ca44adb6cf80bbdc9f2",
+  "source_bytes": 2067,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AdaGrad_Optimizer_v4/AdaGrad_Optimizer_v4_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4143,
+    "completion_tokens": 1026,
+    "total_tokens": 5169
+  }
+}

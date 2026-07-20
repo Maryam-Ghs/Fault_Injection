@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T19:13:43.270127+00:00",
+  "request_started_at_utc": "2026-07-16T19:13:17.674368+00:00",
+  "duration_seconds": 25.596,
+  "source_file": "cpp_codes/AdamW_v8.cpp",
+  "source_relative_path": "AdamW_v8.cpp",
+  "source_sha256": "37c1261692e88db5517c524459fdcce371847be4a4f10b9cf112855123b5d843",
+  "source_bytes": 2767,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AdamW_v8/AdamW_v8_variant_08.cpp",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "variant_profile_description": "Use sparse, imbalanced, clustered, skewed, or mostly-empty input where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4299,
+    "completion_tokens": 1674,
+    "total_tokens": 5973
+  }
+}

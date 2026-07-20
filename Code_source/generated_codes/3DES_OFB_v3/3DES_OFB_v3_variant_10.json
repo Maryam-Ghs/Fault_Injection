@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T15:07:09.420012+00:00",
+  "request_started_at_utc": "2026-07-16T15:06:47.280745+00:00",
+  "duration_seconds": 22.139,
+  "source_file": "cpp_codes/3DES_OFB_v3.cpp",
+  "source_relative_path": "3DES_OFB_v3.cpp",
+  "source_sha256": "d14ed457c2daca596c1797b3e7492e08b2f44724c1cc3fab99f96eee35859f02",
+  "source_bytes": 4665,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/3DES_OFB_v3/3DES_OFB_v3_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the program's intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4801,
+    "completion_tokens": 1831,
+    "total_tokens": 6632
+  }
+}

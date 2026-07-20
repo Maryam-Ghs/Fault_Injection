@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:41:45.926241+00:00",
+  "source_file": "cpp_codes/Baby_Step_Giant_Step_Algorithm_v4.cpp",
+  "source_relative_path": "Baby_Step_Giant_Step_Algorithm_v4.cpp",
+  "source_sha256": "04bcb9b3a4cc0a9d272fe33bd76b3fb1bb6fbd70da5f0f150ee4536b60c6a70f",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

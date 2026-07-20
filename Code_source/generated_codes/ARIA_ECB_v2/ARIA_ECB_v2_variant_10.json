@@ -1,0 +1,35 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T11:04:29.259001+00:00",
+  "request_started_at_utc": "2026-07-17T11:03:07.613166+00:00",
+  "duration_seconds": 81.645,
+  "source_file": "cpp_codes/ARIA_ECB_v2.cpp",
+  "source_relative_path": "ARIA_ECB_v2.cpp",
+  "source_sha256": "c5c8ff93a69f845795c0f28975fd15606d5d2e1006a66882f2f4cbcb923eeb37",
+  "source_bytes": 9314,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ARIA_ECB_v2/ARIA_ECB_v2_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "request_id": "30de264a-e0f9-410d-9fd5-c84bd4c73ecf",
+  "api_call_number_in_this_run": 58,
+  "variants_requested_in_same_call": [
+    10
+  ],
+  "batch_size": 1,
+  "batch_attempt": 1,
+  "split_depth": 1,
+  "finish_reason": "stop",
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage_for_whole_batch": {
+    "prompt_tokens": 7372,
+    "completion_tokens": 4573,
+    "total_tokens": 11945
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T15:16:53.879787+00:00",
+  "request_started_at_utc": "2026-07-16T15:16:36.591449+00:00",
+  "duration_seconds": 17.288,
+  "source_file": "cpp_codes/A*_Search_Algorithm_v1.cpp",
+  "source_relative_path": "A*_Search_Algorithm_v1.cpp",
+  "source_sha256": "867a7b0354c48bd98e8bd3d594fe3f429b27e0763da9450113a64312eb57fa0e",
+  "source_bytes": 4148,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/A*_Search_Algorithm_v1/A*_Search_Algorithm_v1_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4560,
+    "completion_tokens": 1559,
+    "total_tokens": 6119
+  }
+}

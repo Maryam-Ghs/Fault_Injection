@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T06:56:00.183131+00:00",
+  "request_started_at_utc": "2026-07-17T06:55:23.848358+00:00",
+  "duration_seconds": 36.335,
+  "source_file": "cpp_codes/Ant_Colony_Optimization_v10.cpp",
+  "source_relative_path": "Ant_Colony_Optimization_v10.cpp",
+  "source_sha256": "2cc7536c61913386b7484dd6378c1089cc7fc2a32a006416fd29aafa9af9c5e4",
+  "source_bytes": 10524,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Ant_Colony_Optimization_v10/Ant_Colony_Optimization_v10_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 6150,
+    "completion_tokens": 3427,
+    "total_tokens": 9577
+  }
+}

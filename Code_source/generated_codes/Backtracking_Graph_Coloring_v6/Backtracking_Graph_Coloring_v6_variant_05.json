@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:46:05.892853+00:00",
+  "source_file": "cpp_codes/Backtracking_Graph_Coloring_v6.cpp",
+  "source_relative_path": "Backtracking_Graph_Coloring_v6.cpp",
+  "source_sha256": "6a802e857d6dd81ead511af8af81b57b9e3b5400ea27d388194043b663c925ff",
+  "variant_number": 5,
+  "variant_profile": "duplicate-heavy",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

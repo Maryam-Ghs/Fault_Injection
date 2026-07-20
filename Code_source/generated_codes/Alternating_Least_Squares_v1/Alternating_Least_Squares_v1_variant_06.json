@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T06:04:05.034701+00:00",
+  "request_started_at_utc": "2026-07-17T06:03:37.220010+00:00",
+  "duration_seconds": 27.815,
+  "source_file": "cpp_codes/Alternating_Least_Squares_v1.cpp",
+  "source_relative_path": "Alternating_Least_Squares_v1.cpp",
+  "source_sha256": "aa39baca0b59b1c73274f05680f75d810d4616ae3759a93a04749c32e10cb5b5",
+  "source_bytes": 8627,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Alternating_Least_Squares_v1/Alternating_Least_Squares_v1_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 2,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5770,
+    "completion_tokens": 2626,
+    "total_tokens": 8396
+  }
+}

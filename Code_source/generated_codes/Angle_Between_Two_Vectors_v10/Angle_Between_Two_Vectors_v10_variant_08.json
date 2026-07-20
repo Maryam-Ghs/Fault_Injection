@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T06:44:21.131563+00:00",
+  "request_started_at_utc": "2026-07-17T06:44:09.703598+00:00",
+  "duration_seconds": 11.428,
+  "source_file": "cpp_codes/Angle_Between_Two_Vectors_v10.cpp",
+  "source_relative_path": "Angle_Between_Two_Vectors_v10.cpp",
+  "source_sha256": "cc9cd868f4377b39e9088f7e2b62c7579825df3d579f01de8aefe1992900a33d",
+  "source_bytes": 2258,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Angle_Between_Two_Vectors_v10/Angle_Between_Two_Vectors_v10_variant_08.cpp",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "variant_profile_description": "Use sparse, imbalanced, clustered, skewed, or mostly-empty input where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4101,
+    "completion_tokens": 912,
+    "total_tokens": 5013
+  }
+}

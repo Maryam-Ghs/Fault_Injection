@@ -1,0 +1,42 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T11:38:23.125648+00:00",
+  "request_started_at_utc": "2026-07-17T11:30:24.513170+00:00",
+  "duration_seconds": 478.61,
+  "source_file": "cpp_codes/ARIA_OFB_v2.cpp",
+  "source_relative_path": "ARIA_OFB_v2.cpp",
+  "source_sha256": "994d3871d0689962cbc6ecdda0c2cf2748bd5a9c8f547124d78cd088ad1f58ae",
+  "source_bytes": 5694,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ARIA_OFB_v2/ARIA_OFB_v2_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where permitted, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "request_id": "3a23b7f4-841d-4772-8181-dc08cf51e939",
+  "api_call_number_in_this_run": 74,
+  "variants_requested_in_same_call": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "batch_size": 8,
+  "batch_attempt": 2,
+  "split_depth": 0,
+  "finish_reason": "length",
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage_for_whole_batch": {
+    "prompt_tokens": 7231,
+    "completion_tokens": 32768,
+    "total_tokens": 39999
+  }
+}

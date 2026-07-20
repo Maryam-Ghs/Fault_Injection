@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:14:10.417511+00:00",
+  "request_started_at_utc": "2026-07-16T20:13:51.832325+00:00",
+  "duration_seconds": 18.585,
+  "source_file": "cpp_codes/Adaptive_Step_Runge_Kutta_v9.cpp",
+  "source_relative_path": "Adaptive_Step_Runge_Kutta_v9.cpp",
+  "source_sha256": "4bf10e6588d948e2d1dd349fc40924c4633278349c8246a18349982ed0b573fa",
+  "source_bytes": 3093,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adaptive_Step_Runge_Kutta_v9/Adaptive_Step_Runge_Kutta_v9_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4519,
+    "completion_tokens": 1382,
+    "total_tokens": 5901
+  }
+}

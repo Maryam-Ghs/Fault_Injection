@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T05:16:19.876970+00:00",
+  "request_started_at_utc": "2026-07-17T05:16:04.281724+00:00",
+  "duration_seconds": 15.595,
+  "source_file": "cpp_codes/All_Pairs_Edge_Connectivity_v6.cpp",
+  "source_relative_path": "All_Pairs_Edge_Connectivity_v6.cpp",
+  "source_sha256": "aa0d91f8f08bf2b5621f71b5e97591af1162bc6af59b90c4fe7d63c2625db48a",
+  "source_bytes": 4057,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/All_Pairs_Edge_Connectivity_v6/All_Pairs_Edge_Connectivity_v6_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the program's intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4560,
+    "completion_tokens": 1746,
+    "total_tokens": 6306
+  }
+}

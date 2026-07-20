@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:08:19.921447+00:00",
+  "request_started_at_utc": "2026-07-16T20:08:02.335200+00:00",
+  "duration_seconds": 17.586,
+  "source_file": "cpp_codes/Adaptive_Step_Runge_Kutta_v5.cpp",
+  "source_relative_path": "Adaptive_Step_Runge_Kutta_v5.cpp",
+  "source_sha256": "9bc91d7c9b58bd84f2b15fbdd07b2c7120f32677a6ab4e5f698502a1defe8b40",
+  "source_bytes": 3141,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adaptive_Step_Runge_Kutta_v5/Adaptive_Step_Runge_Kutta_v5_variant_02.cpp",
+  "variant_number": 2,
+  "variant_profile": "small-diverse",
+  "variant_profile_description": "Use a small input containing varied ordinary values and structures.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4385,
+    "completion_tokens": 1312,
+    "total_tokens": 5697
+  }
+}

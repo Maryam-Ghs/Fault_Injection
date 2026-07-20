@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T23:46:54.927011+00:00",
+  "request_started_at_utc": "2026-07-16T23:46:16.469194+00:00",
+  "duration_seconds": 38.458,
+  "source_file": "cpp_codes/AES_128_v1.cpp",
+  "source_relative_path": "AES_128_v1.cpp",
+  "source_sha256": "2f1aa4a36a52ec52ae32e958d40de1a3ea1b114554545e5e86f645752de3fe67",
+  "source_bytes": 8741,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AES_128_v1/AES_128_v1_variant_08.cpp",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "variant_profile_description": "Use sparse, imbalanced, clustered, skewed, or mostly-empty input where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 6563,
+    "completion_tokens": 3597,
+    "total_tokens": 10160
+  }
+}

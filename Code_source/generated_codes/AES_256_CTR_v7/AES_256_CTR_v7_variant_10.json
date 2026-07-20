@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T02:10:03.496381+00:00",
+  "request_started_at_utc": "2026-07-17T02:09:25.508884+00:00",
+  "duration_seconds": 37.988,
+  "source_file": "cpp_codes/AES_256_CTR_v7.cpp",
+  "source_relative_path": "AES_256_CTR_v7.cpp",
+  "source_sha256": "1cf4c0a03d4c028ad6f4f65aff2d6a37fbfde7fe29f66893b8aa1364fa767a99",
+  "source_bytes": 10471,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AES_256_CTR_v7/AES_256_CTR_v7_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the program's intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 6651,
+    "completion_tokens": 3748,
+    "total_tokens": 10399
+  }
+}

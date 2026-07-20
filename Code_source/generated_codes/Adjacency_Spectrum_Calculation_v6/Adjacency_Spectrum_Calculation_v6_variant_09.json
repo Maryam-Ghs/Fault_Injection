@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:58:54.299010+00:00",
+  "request_started_at_utc": "2026-07-16T20:58:40.721190+00:00",
+  "duration_seconds": 13.578,
+  "source_file": "cpp_codes/Adjacency_Spectrum_Calculation_v6.cpp",
+  "source_relative_path": "Adjacency_Spectrum_Calculation_v6.cpp",
+  "source_sha256": "adc3087767e914f7971f88e1db0aadb9129133d726b3cf820c6ce2dd021d76e8",
+  "source_bytes": 2790,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adjacency_Spectrum_Calculation_v6/Adjacency_Spectrum_Calculation_v6_variant_09.cpp",
+  "variant_number": 9,
+  "variant_profile": "medium-deterministic-random",
+  "variant_profile_description": "Use a medium-sized, diverse, deterministic pseudo-random-looking input. Do not depend on the current time or an unspecified random seed.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4280,
+    "completion_tokens": 1282,
+    "total_tokens": 5562
+  }
+}

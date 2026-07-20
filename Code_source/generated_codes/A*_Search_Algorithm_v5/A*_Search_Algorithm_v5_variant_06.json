@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T15:28:01.138332+00:00",
+  "request_started_at_utc": "2026-07-16T15:27:26.209969+00:00",
+  "duration_seconds": 34.928,
+  "source_file": "cpp_codes/A*_Search_Algorithm_v5.cpp",
+  "source_relative_path": "A*_Search_Algorithm_v5.cpp",
+  "source_sha256": "44a1d29760d1bfa8d5f403eaf441b22fa13f260757948ab4080f04beb51daf58",
+  "source_bytes": 9548,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/A*_Search_Algorithm_v5/A*_Search_Algorithm_v5_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5782,
+    "completion_tokens": 3206,
+    "total_tokens": 8988
+  }
+}

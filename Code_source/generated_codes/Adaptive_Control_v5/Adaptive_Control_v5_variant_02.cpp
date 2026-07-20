@@ -1,0 +1,105 @@
+/* LLM input variant 2: small-diverse */
+// Adaptive Control - Version 5
+// Simple MRAC example using only int and float types.
+// Generates its own deterministic small test data, runs on stack arrays and prints results.
+
+#include <iostream>
+#include <cmath>
+
+class AdaptiveCtrl {
+    // Adaptive parameters
+    float k_ref;   // gain for reference signal
+    float k_out;   // gain for measured output
+    float learn;   // learning rate (gamma)
+
+public:
+    AdaptiveCtrl()
+        : k_ref(0.0f), k_out(0.0f), learn(0.001f) {}
+
+    // Compute control signal u[t] = k_ref * r[t] + k_out * y[t]
+    float compute(float r_val, float y_val) {
+        float term1 = k_ref * r_val;
+        float term2 = k_out * y_val;
+        float u_val = term1 + term2;
+        return u_val;
+    }
+
+    // Update parameters using gradient descent:
+    // k = k - learn * e * phi   (phi = [r, y])
+    void adapt(float r_val, float y_val, float err) {
+        float grad_ref = err * r_val;
+        float grad_out = err * y_val;
+
+        float delta_ref = learn * grad_ref;
+        float delta_out = learn * grad_out;
+
+        k_ref = k_ref - delta_ref;
+        k_out = k_out - delta_out;
+    }
+
+    float getKref() const { return k_ref; }
+    float getKout() const { return k_out; }
+};
+
+int main() {
+    const int N = 20;                     // small simulation size
+    float ref_sig[N];                     // reference signal r[t]
+    float meas_out[N];                    // measured plant output y[t]
+    float ctrl_sig[N];                    // control signal u[t]
+
+    // Plant constants (unknown to controller)
+    const float a = 0.7f;                 // y[t] = a*y[t-1] + b*u[t-1] + noise
+    const float b = 0.5f;
+    const float noise_amp = 0.05f;
+
+    // Initialise arrays with zeros
+    for (int i = 0; i < N; ++i) {
+        ref_sig[i] = 0.0f;
+        meas_out[i] = 0.0f;
+        ctrl_sig[i] = 0.0f;
+    }
+
+    // Deterministic diverse reference signal values
+    float preset_ref[N] = {
+        0.0f, 0.5f, -0.3f, 0.8f, -0.7f,
+        0.2f, -0.1f, 0.9f, -0.4f, 0.3f,
+        -0.6f, 0.1f, 0.4f, -0.2f, 0.7f,
+        -0.5f, 0.6f, -0.8f, 0.2f, -0.9f
+    };
+    for (int i = 0; i < N; ++i) {
+        ref_sig[i] = preset_ref[i];
+    }
+
+    AdaptiveCtrl controller;
+
+    // Simulation loop
+    for (int t = 1; t < N; ++t) {
+        // 1) compute control based on current reference and previous output
+        float u_val = controller.compute(ref_sig[t - 1], meas_out[t - 1]);
+        ctrl_sig[t] = u_val;
+
+        // 2) plant dynamics (simple first‑order with deterministic small noise)
+        float noise = ((t % 5) - 2) * 0.01f; // values: -0.02, -0.01, 0, 0.01, 0.02 cyclic
+        float y_val = a * meas_out[t - 1] + b * u_val + noise;
+        meas_out[t] = y_val;
+
+        // 3) error between plant output and reference
+        float err = y_val - ref_sig[t];
+
+        // 4) adapt controller parameters
+        controller.adapt(ref_sig[t], y_val, err);
+    }
+
+    // Print final adaptive gains
+    std::cout << "Final adaptive gains after " << N << " steps:\n";
+    std::cout << "k_ref (gain on reference) = " << controller.getKref() << "\n";
+    std::cout << "k_out (gain on output)   = " << controller.getKout() << "\n\n";
+
+    // Print first 10 samples of reference, output and control
+    std::cout << "First 10 samples (t, r[t], y[t], u[t]):\n";
+    for (int i = 0; i < 10; ++i) {
+        std::cout << i << "  " << ref_sig[i] << "  " << meas_out[i] << "  " << ctrl_sig[i] << "\n";
+    }
+
+    return 0;
+}

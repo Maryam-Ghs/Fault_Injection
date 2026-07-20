@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T18:51:45.848430+00:00",
+  "request_started_at_utc": "2026-07-16T18:51:30.989349+00:00",
+  "duration_seconds": 14.859,
+  "source_file": "cpp_codes/Adams_Moulton_Method_v7.cpp",
+  "source_relative_path": "Adams_Moulton_Method_v7.cpp",
+  "source_sha256": "5fb8410339a92120d1ac075aa4b166591747170e3ae5010ed3f54a9033082fe5",
+  "source_bytes": 2337,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adams_Moulton_Method_v7/Adams_Moulton_Method_v7_variant_05.cpp",
+  "variant_number": 5,
+  "variant_profile": "duplicate-heavy",
+  "variant_profile_description": "Use repeated values, ties, duplicate keys, or repeated patterns where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4148,
+    "completion_tokens": 1231,
+    "total_tokens": 5379
+  }
+}

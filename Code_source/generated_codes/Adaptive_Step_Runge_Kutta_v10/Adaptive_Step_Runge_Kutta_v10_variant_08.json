@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:06:24.171913+00:00",
+  "request_started_at_utc": "2026-07-16T20:06:05.780734+00:00",
+  "duration_seconds": 18.391,
+  "source_file": "cpp_codes/Adaptive_Step_Runge_Kutta_v10.cpp",
+  "source_relative_path": "Adaptive_Step_Runge_Kutta_v10.cpp",
+  "source_sha256": "ce63a70136e9a6f8c709ae954f70ae6154e2cb95f8ab1e1685a80c8fb8efc3fa",
+  "source_bytes": 5065,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adaptive_Step_Runge_Kutta_v10/Adaptive_Step_Runge_Kutta_v10_variant_08.cpp",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "variant_profile_description": "Use sparse, imbalanced, clustered, skewed, or mostly-empty input where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4665,
+    "completion_tokens": 1675,
+    "total_tokens": 6340
+  }
+}

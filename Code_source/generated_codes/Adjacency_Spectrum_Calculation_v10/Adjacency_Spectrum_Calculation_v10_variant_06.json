@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:50:20.754188+00:00",
+  "request_started_at_utc": "2026-07-16T20:50:08.969217+00:00",
+  "duration_seconds": 11.785,
+  "source_file": "cpp_codes/Adjacency_Spectrum_Calculation_v10.cpp",
+  "source_relative_path": "Adjacency_Spectrum_Calculation_v10.cpp",
+  "source_sha256": "f69f50fe6539c888adafad99443ab3617947d18c1e5a58a6a7bc6e169fe8c784",
+  "source_bytes": 2439,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adjacency_Spectrum_Calculation_v10/Adjacency_Spectrum_Calculation_v10_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4136,
+    "completion_tokens": 1079,
+    "total_tokens": 5215
+  }
+}

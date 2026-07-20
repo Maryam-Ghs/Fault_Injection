@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T04:37:52.470358+00:00",
+  "request_started_at_utc": "2026-07-17T04:36:59.082008+00:00",
+  "duration_seconds": 53.388,
+  "source_file": "cpp_codes/ALBERT_v5.cpp",
+  "source_relative_path": "ALBERT_v5.cpp",
+  "source_sha256": "59ebaec15eae23e311a679eecb4ccfab088994d937e186256bb3d9b4329eb632",
+  "source_bytes": 11309,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ALBERT_v5/ALBERT_v5_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the program's intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 8117,
+    "completion_tokens": 5893,
+    "total_tokens": 14010
+  }
+}

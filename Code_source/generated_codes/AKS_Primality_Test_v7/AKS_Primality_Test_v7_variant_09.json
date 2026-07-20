@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T04:22:55.721444+00:00",
+  "request_started_at_utc": "2026-07-17T04:22:32.060380+00:00",
+  "duration_seconds": 23.661,
+  "source_file": "cpp_codes/AKS_Primality_Test_v7.cpp",
+  "source_relative_path": "AKS_Primality_Test_v7.cpp",
+  "source_sha256": "1438f04f84042906c941e986919c508c56e94c1c4ea8421402399700f1ff6b23",
+  "source_bytes": 4926,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AKS_Primality_Test_v7/AKS_Primality_Test_v7_variant_09.cpp",
+  "variant_number": 9,
+  "variant_profile": "medium-deterministic-random",
+  "variant_profile_description": "Use a medium-sized, diverse, deterministic pseudo-random-looking input. Do not depend on the current time or an unspecified random seed.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4988,
+    "completion_tokens": 1942,
+    "total_tokens": 6930
+  }
+}

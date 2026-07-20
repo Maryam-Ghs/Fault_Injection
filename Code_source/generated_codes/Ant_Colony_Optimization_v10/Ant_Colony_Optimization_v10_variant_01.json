@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T06:55:23.846856+00:00",
+  "request_started_at_utc": "2026-07-17T06:54:52.678048+00:00",
+  "duration_seconds": 31.169,
+  "source_file": "cpp_codes/Ant_Colony_Optimization_v10.cpp",
+  "source_relative_path": "Ant_Colony_Optimization_v10.cpp",
+  "source_sha256": "2cc7536c61913386b7484dd6378c1089cc7fc2a32a006416fd29aafa9af9c5e4",
+  "source_bytes": 10524,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Ant_Colony_Optimization_v10/Ant_Colony_Optimization_v10_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 6145,
+    "completion_tokens": 2786,
+    "total_tokens": 8931
+  }
+}

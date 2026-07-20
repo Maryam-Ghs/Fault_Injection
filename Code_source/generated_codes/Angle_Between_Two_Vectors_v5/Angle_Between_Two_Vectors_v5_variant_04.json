@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T06:46:55.379200+00:00",
+  "request_started_at_utc": "2026-07-17T06:46:45.146049+00:00",
+  "duration_seconds": 10.233,
+  "source_file": "cpp_codes/Angle_Between_Two_Vectors_v5.cpp",
+  "source_relative_path": "Angle_Between_Two_Vectors_v5.cpp",
+  "source_sha256": "12c5b1a7ea68039cba9b008298faa076992e4cf66595118d0d891193b9e95460",
+  "source_bytes": 1775,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Angle_Between_Two_Vectors_v5/Angle_Between_Two_Vectors_v5_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 3995,
+    "completion_tokens": 801,
+    "total_tokens": 4796
+  }
+}

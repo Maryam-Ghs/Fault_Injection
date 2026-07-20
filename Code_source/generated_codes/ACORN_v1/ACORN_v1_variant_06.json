@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T16:36:51.232401+00:00",
+  "request_started_at_utc": "2026-07-16T16:36:42.686500+00:00",
+  "duration_seconds": 8.546,
+  "source_file": "cpp_codes/ACORN_v1.cpp",
+  "source_relative_path": "ACORN_v1.cpp",
+  "source_sha256": "f5543229953b0c0716e7f0451eba8fb34af13fc54a3ddac95a7d5ab286b7faf4",
+  "source_bytes": 1616,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ACORN_v1/ACORN_v1_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 3883,
+    "completion_tokens": 678,
+    "total_tokens": 4561
+  }
+}

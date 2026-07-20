@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T03:49:18.696646+00:00",
+  "request_started_at_utc": "2026-07-17T03:48:56.031245+00:00",
+  "duration_seconds": 22.665,
+  "source_file": "cpp_codes/Affine_Transformation_3D_v3.cpp",
+  "source_relative_path": "Affine_Transformation_3D_v3.cpp",
+  "source_sha256": "302d6cc7a446e4161c32e650637367869a2f800b527635f86ef53d10fe86a16a",
+  "source_bytes": 6341,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Affine_Transformation_3D_v3/Affine_Transformation_3D_v3_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5144,
+    "completion_tokens": 2010,
+    "total_tokens": 7154
+  }
+}

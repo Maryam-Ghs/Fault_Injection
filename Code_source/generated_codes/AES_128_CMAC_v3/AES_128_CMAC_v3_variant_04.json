@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T21:53:37.135758+00:00",
+  "request_started_at_utc": "2026-07-16T21:52:33.350615+00:00",
+  "duration_seconds": 63.785,
+  "source_file": "cpp_codes/AES_128_CMAC_v3.cpp",
+  "source_relative_path": "AES_128_CMAC_v3.cpp",
+  "source_sha256": "8d39259fad46475cea6aded6205dd6c188592a33f5abcbd4fb580a7bedfaf10e",
+  "source_bytes": 10863,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AES_128_CMAC_v3/AES_128_CMAC_v3_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 2,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 7648,
+    "completion_tokens": 5923,
+    "total_tokens": 13571
+  }
+}

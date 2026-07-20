@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T05:23:33.398956+00:00",
+  "request_started_at_utc": "2026-07-17T05:23:21.614733+00:00",
+  "duration_seconds": 11.784,
+  "source_file": "cpp_codes/All_Pairs_Shortest_Path_via_Repeated_Dijkstra_v7.cpp",
+  "source_relative_path": "All_Pairs_Shortest_Path_via_Repeated_Dijkstra_v7.cpp",
+  "source_sha256": "56da922dd05db7f1515779a77b937410ffd6b26c4f43cc648821d614ebeb0ca3",
+  "source_bytes": 2518,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/All_Pairs_Shortest_Path_via_Repeated_Dijkstra_v7/All_Pairs_Shortest_Path_via_Repeated_Dijkstra_v7_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4122,
+    "completion_tokens": 918,
+    "total_tokens": 5040
+  }
+}

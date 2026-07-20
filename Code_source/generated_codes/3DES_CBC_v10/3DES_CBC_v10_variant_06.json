@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T13:33:23.019917+00:00",
+  "request_started_at_utc": "2026-07-16T13:32:20.476984+00:00",
+  "duration_seconds": 62.543,
+  "source_file": "cpp_codes/3DES_CBC_v10.cpp",
+  "source_relative_path": "3DES_CBC_v10.cpp",
+  "source_sha256": "ee2d66bac828a1b412a819dd480f59786f4b8561f0fecd53c4c78e4ef613e805",
+  "source_bytes": 14023,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/3DES_CBC_v10/3DES_CBC_v10_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 8420,
+    "completion_tokens": 5612,
+    "total_tokens": 14032
+  }
+}

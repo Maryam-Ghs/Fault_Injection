@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T01:30:25.809967+00:00",
+  "request_started_at_utc": "2026-07-17T01:29:55.809460+00:00",
+  "duration_seconds": 30.001,
+  "source_file": "cpp_codes/AES_256_CFB_v8.cpp",
+  "source_relative_path": "AES_256_CFB_v8.cpp",
+  "source_sha256": "40b5611880f081f7fbadfb6be4eb3d11f9faebb7c799f6853b8d4d1475e20598",
+  "source_bytes": 7206,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AES_256_CFB_v8/AES_256_CFB_v8_variant_05.cpp",
+  "variant_number": 5,
+  "variant_profile": "duplicate-heavy",
+  "variant_profile_description": "Use repeated values, ties, duplicate keys, or repeated patterns where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5850,
+    "completion_tokens": 2845,
+    "total_tokens": 8695
+  }
+}

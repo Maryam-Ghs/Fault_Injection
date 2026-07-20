@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T13:48:50.664934+00:00",
+  "request_started_at_utc": "2026-07-16T13:48:07.980330+00:00",
+  "duration_seconds": 42.685,
+  "source_file": "cpp_codes/3DES_CFB_v10.cpp",
+  "source_relative_path": "3DES_CFB_v10.cpp",
+  "source_sha256": "c92d315030fa5dd7812ed2132d38715ac8ec379ef0fabfecbf1a715bf9632e65",
+  "source_bytes": 10881,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/3DES_CFB_v10/3DES_CFB_v10_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 7343,
+    "completion_tokens": 4240,
+    "total_tokens": 11583
+  }
+}

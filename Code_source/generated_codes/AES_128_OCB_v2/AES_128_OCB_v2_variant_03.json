@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T23:13:18.673513+00:00",
+  "request_started_at_utc": "2026-07-16T23:12:29.400493+00:00",
+  "duration_seconds": 49.273,
+  "source_file": "cpp_codes/AES_128_OCB_v2.cpp",
+  "source_relative_path": "AES_128_OCB_v2.cpp",
+  "source_sha256": "045283bfa58e2d49b03f05e73aca7c5e245fa1836956096350da5f66505b6695",
+  "source_bytes": 12231,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AES_128_OCB_v2/AES_128_OCB_v2_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 7420,
+    "completion_tokens": 4557,
+    "total_tokens": 11977
+  }
+}

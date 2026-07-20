@@ -1,0 +1,154 @@
+/* LLM input variant 1: minimal-boundary */
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+// generate a random directed graph (adjacency list)
+void generateGraph(int n, int** &adj, int* &deg) {
+    adj = new int*[n];
+    deg = new int[n];
+    int v = 0;
+    while (v < n) {
+        int d = std::rand() % n;          // number of outgoing edges
+        deg[v] = d;
+        if (d > 0) {
+            adj[v] = new int[d];
+            int e = 0;
+            while (e < d) {
+                adj[v][e] = std::rand() % n;   // target vertex
+                ++e;
+            }
+        } else {
+            adj[v] = nullptr;
+        }
+        ++v;
+    }
+}
+
+// first pass: compute indegrees of the reversed graph
+void computeReverseDegrees(int n, int** adj, int* deg, int* &revDeg) {
+    revDeg = new int[n];
+    int i = 0;
+    while (i < n) {
+        revDeg[i] = 0;
+        ++i;
+    }
+    i = 0;
+    while (i < n) {
+        int d = deg[i];
+        int j = 0;
+        // manual unrolling by 2
+        while (j + 1 < d) {
+            int t1 = adj[i][j];
+            int t2 = adj[i][j + 1];
+            revDeg[t1] = revDeg[t1] + 1;
+            revDeg[t2] = revDeg[t2] + 1;
+            j = j + 2;
+        }
+        if (j < d) {
+            int t = adj[i][j];
+            revDeg[t] = revDeg[t] + 1;
+        }
+        ++i;
+    }
+}
+
+// second pass: fill the reversed adjacency lists
+void buildReverseGraph(int n, int** adj, int* deg, int* revDeg, int** &revAdj) {
+    revAdj = new int*[n];
+    int i = 0;
+    while (i < n) {
+        int d = revDeg[i];
+        if (d > 0) {
+            revAdj[i] = new int[d];
+        } else {
+            revAdj[i] = nullptr;
+        }
+        ++i;
+    }
+
+    // temporary counters for each vertex
+    int* pos = new int[n];
+    i = 0;
+    while (i < n) {
+        pos[i] = 0;
+        ++i;
+    }
+
+    i = 0;
+    while (i < n) {
+        int d = deg[i];
+        int j = 0;
+        while (j + 1 < d) {
+            int t1 = adj[i][j];
+            int t2 = adj[i][j + 1];
+            revAdj[t1][pos[t1]++] = i;
+            revAdj[t2][pos[t2]++] = i;
+            j = j + 2;
+        }
+        if (j < d) {
+            int t = adj[i][j];
+            revAdj[t][pos[t]++] = i;
+        }
+        ++i;
+    }
+    delete[] pos;
+}
+
+// print adjacency list
+void printAdjacency(int n, int** adj, int* deg, char* label) {
+    std::cout << label << " adjacency list:\n";
+    int v = 0;
+    while (v < n) {
+        std::cout << v << ": ";
+        int d = deg[v];
+        int e = 0;
+        while (e < d) {
+            std::cout << adj[v][e] << " ";
+            ++e;
+        }
+        std::cout << "\n";
+        ++v;
+    }
+}
+
+// free allocated memory
+void freeGraph(int n, int** adj, int* deg) {
+    int v = 0;
+    while (v < n) {
+        if (adj[v] != nullptr) {
+            delete[] adj[v];
+        }
+        ++v;
+    }
+    delete[] adj;
+    delete[] deg;
+}
+
+// Version 5
+int main() {
+    std::srand((int)std::time(0));   // seed RNG
+    int nodeCount = 1;               // minimal nontrivial graph
+
+    // deterministic graph: single vertex with a self-loop
+    int** outAdj = new int*[nodeCount];
+    int* outDeg = new int[nodeCount];
+    outDeg[0] = 1;
+    outAdj[0] = new int[1];
+    outAdj[0][0] = 0; // edge from 0 to 0
+
+    int* revDeg;
+    computeReverseDegrees(nodeCount, outAdj, outDeg, revDeg);
+
+    int** revAdj;
+    buildReverseGraph(nodeCount, outAdj, outDeg, revDeg, revAdj);
+
+    char title1[] = "Original";
+    char title2[] = "Reversed";
+    printAdjacency(nodeCount, outAdj, outDeg, title1);
+    printAdjacency(nodeCount, revAdj, revDeg, title2);
+
+    freeGraph(nodeCount, outAdj, outDeg);
+    freeGraph(nodeCount, revAdj, revDeg);
+    return 0;
+}

@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T22:53:55.134497+00:00",
+  "request_started_at_utc": "2026-07-16T22:53:03.746144+00:00",
+  "duration_seconds": 51.388,
+  "source_file": "cpp_codes/AES_128_GCM_v3.cpp",
+  "source_relative_path": "AES_128_GCM_v3.cpp",
+  "source_sha256": "5f95fd558b0afb2b26cb0ecf094ee7c2973a721063f510267cf814cf341cc806",
+  "source_bytes": 11783,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AES_128_GCM_v3/AES_128_GCM_v3_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the program's intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 2,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 8140,
+    "completion_tokens": 5321,
+    "total_tokens": 13461
+  }
+}

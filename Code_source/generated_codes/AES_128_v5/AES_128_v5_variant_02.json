@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T23:51:15.069192+00:00",
+  "request_started_at_utc": "2026-07-16T23:50:39.659765+00:00",
+  "duration_seconds": 35.409,
+  "source_file": "cpp_codes/AES_128_v5.cpp",
+  "source_relative_path": "AES_128_v5.cpp",
+  "source_sha256": "24f0011a88dc2df5d490c2a44163ac8f38d5b1675ef558d2e5e1638128eeb516",
+  "source_bytes": 8015,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AES_128_v5/AES_128_v5_variant_02.cpp",
+  "variant_number": 2,
+  "variant_profile": "small-diverse",
+  "variant_profile_description": "Use a small input containing varied ordinary values and structures.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 6216,
+    "completion_tokens": 3283,
+    "total_tokens": 9499
+  }
+}

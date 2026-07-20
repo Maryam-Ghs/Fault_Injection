@@ -1,0 +1,43 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T10:17:40.024326+00:00",
+  "request_started_at_utc": "2026-07-17T10:12:18.031349+00:00",
+  "duration_seconds": 321.989,
+  "source_file": "cpp_codes/ARIA_CFB_v10.cpp",
+  "source_relative_path": "ARIA_CFB_v10.cpp",
+  "source_sha256": "5268648c1520a334010c6537ba84c68448e1248afd235f1f6359472e7263cae0",
+  "source_bytes": 9368,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ARIA_CFB_v10/ARIA_CFB_v10_variant_05.cpp",
+  "variant_number": 5,
+  "variant_profile": "duplicate-heavy",
+  "variant_profile_description": "Use repeated values, ties, duplicate keys, or repeated patterns where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "request_id": "ca076843-7013-4f01-b45a-da4e2e8e272e",
+  "api_call_number_in_this_run": 17,
+  "variants_requested_in_same_call": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "batch_size": 9,
+  "batch_attempt": 2,
+  "split_depth": 0,
+  "finish_reason": "stop",
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage_for_whole_batch": {
+    "prompt_tokens": 7746,
+    "completion_tokens": 22927,
+    "total_tokens": 30673
+  }
+}

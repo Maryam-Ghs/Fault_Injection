@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:45:05.664062+00:00",
+  "request_started_at_utc": "2026-07-16T20:44:53.575204+00:00",
+  "duration_seconds": 12.089,
+  "source_file": "cpp_codes/Adjacency_Matrix_Normalization_v4.cpp",
+  "source_relative_path": "Adjacency_Matrix_Normalization_v4.cpp",
+  "source_sha256": "c7848283d88603bccee1e9df5b521e3bb4ae6b8de3c8ed95968ad9f8c193dc87",
+  "source_bytes": 2969,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adjacency_Matrix_Normalization_v4/Adjacency_Matrix_Normalization_v4_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4114,
+    "completion_tokens": 1049,
+    "total_tokens": 5163
+  }
+}

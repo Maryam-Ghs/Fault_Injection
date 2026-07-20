@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T16:44:57.729260+00:00",
+  "request_started_at_utc": "2026-07-16T16:44:47.166344+00:00",
+  "duration_seconds": 10.563,
+  "source_file": "cpp_codes/ACORN_v8.cpp",
+  "source_relative_path": "ACORN_v8.cpp",
+  "source_sha256": "b5959b25f9ed38e405442ea8cd1dd3aee8ec6af55d0a79c001f13bfead755980",
+  "source_bytes": 1875,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ACORN_v8/ACORN_v8_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 3925,
+    "completion_tokens": 935,
+    "total_tokens": 4860
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T05:28:05.015213+00:00",
+  "request_started_at_utc": "2026-07-17T05:27:42.884470+00:00",
+  "duration_seconds": 22.131,
+  "source_file": "cpp_codes/All_Pairs_Vertex_Connectivity_v1.cpp",
+  "source_relative_path": "All_Pairs_Vertex_Connectivity_v1.cpp",
+  "source_sha256": "5d2ba03ce06e088c52d503d20452878105757135c247a3bbcd26ee4275703aa9",
+  "source_bytes": 4760,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/All_Pairs_Vertex_Connectivity_v1/All_Pairs_Vertex_Connectivity_v1_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4722,
+    "completion_tokens": 2061,
+    "total_tokens": 6783
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T09:33:26.661554+00:00",
+  "request_started_at_utc": "2026-07-17T09:32:31.198348+00:00",
+  "duration_seconds": 55.463,
+  "source_file": "cpp_codes/ARIA_CBC_256_v6.cpp",
+  "source_relative_path": "ARIA_CBC_256_v6.cpp",
+  "source_sha256": "1e765d8981452683a38cbf34e5161a72632c8764dbeb4cd79155eaef1c006747",
+  "source_bytes": 9841,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ARIA_CBC_256_v6/ARIA_CBC_256_v6_variant_02.cpp",
+  "variant_number": 2,
+  "variant_profile": "small-diverse",
+  "variant_profile_description": "Use a small input containing varied ordinary values and structures.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 2,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 7381,
+    "completion_tokens": 4702,
+    "total_tokens": 12083
+  }
+}

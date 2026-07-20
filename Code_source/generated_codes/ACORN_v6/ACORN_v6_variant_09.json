@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T16:44:22.612871+00:00",
+  "request_started_at_utc": "2026-07-16T16:44:08.667752+00:00",
+  "duration_seconds": 13.945,
+  "source_file": "cpp_codes/ACORN_v6.cpp",
+  "source_relative_path": "ACORN_v6.cpp",
+  "source_sha256": "ba8d273f60d1748feb19f8fea15ea4b0030ebd289d4b50e7164afa47cbea380d",
+  "source_bytes": 4681,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ACORN_v6/ACORN_v6_variant_09.cpp",
+  "variant_number": 9,
+  "variant_profile": "medium-deterministic-random",
+  "variant_profile_description": "Use a medium-sized, diverse, deterministic pseudo-random-looking input. Do not depend on the current time or an unspecified random seed.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4309,
+    "completion_tokens": 1278,
+    "total_tokens": 5587
+  }
+}

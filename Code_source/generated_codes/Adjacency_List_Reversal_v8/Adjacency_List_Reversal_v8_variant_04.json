@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:27:26.498848+00:00",
+  "request_started_at_utc": "2026-07-16T20:26:42.632155+00:00",
+  "duration_seconds": 43.867,
+  "source_file": "cpp_codes/Adjacency_List_Reversal_v8.cpp",
+  "source_relative_path": "Adjacency_List_Reversal_v8.cpp",
+  "source_sha256": "a0c9f96389f20c79b7200d5f7d8f5075ee9c87e6ccf73d1e58b44accebd0fa59",
+  "source_bytes": 4476,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adjacency_List_Reversal_v8/Adjacency_List_Reversal_v8_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 2,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4833,
+    "completion_tokens": 4061,
+    "total_tokens": 8894
+  }
+}

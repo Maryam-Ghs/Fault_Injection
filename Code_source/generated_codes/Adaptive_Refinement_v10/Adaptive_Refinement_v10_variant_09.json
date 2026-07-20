@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T19:51:40.135386+00:00",
+  "request_started_at_utc": "2026-07-16T19:51:05.066410+00:00",
+  "duration_seconds": 35.069,
+  "source_file": "cpp_codes/Adaptive_Refinement_v10.cpp",
+  "source_relative_path": "Adaptive_Refinement_v10.cpp",
+  "source_sha256": "280e31a5784502c2eda09506717fd85ea98d98b45cf384a9835bcecd9f4286f3",
+  "source_bytes": 8825,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adaptive_Refinement_v10/Adaptive_Refinement_v10_variant_09.cpp",
+  "variant_number": 9,
+  "variant_profile": "medium-deterministic-random",
+  "variant_profile_description": "Use a medium-sized, diverse, deterministic pseudo-random-looking input. Do not depend on the current time or an unspecified random seed.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5252,
+    "completion_tokens": 2609,
+    "total_tokens": 7861
+  }
+}

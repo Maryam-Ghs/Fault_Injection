@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:35:42.191126+00:00",
+  "request_started_at_utc": "2026-07-16T20:35:28.667740+00:00",
+  "duration_seconds": 13.523,
+  "source_file": "cpp_codes/Adjacency_Matrix_Multiplication_for_Paths_v6.cpp",
+  "source_relative_path": "Adjacency_Matrix_Multiplication_for_Paths_v6.cpp",
+  "source_sha256": "2cd98ae8483679eca8dce0dd9987c6e92aea10e319d513846a35bf66efdf4fa8",
+  "source_bytes": 3477,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adjacency_Matrix_Multiplication_for_Paths_v6/Adjacency_Matrix_Multiplication_for_Paths_v6_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4407,
+    "completion_tokens": 1149,
+    "total_tokens": 5556
+  }
+}

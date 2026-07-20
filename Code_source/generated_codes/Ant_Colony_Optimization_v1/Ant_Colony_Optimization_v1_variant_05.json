@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T06:52:52.063391+00:00",
+  "request_started_at_utc": "2026-07-17T06:52:10.132393+00:00",
+  "duration_seconds": 41.931,
+  "source_file": "cpp_codes/Ant_Colony_Optimization_v1.cpp",
+  "source_relative_path": "Ant_Colony_Optimization_v1.cpp",
+  "source_sha256": "ffd0272a7c126cd27b95972af6da15ffc976ca314b8261845400b6a48c58150e",
+  "source_bytes": 17990,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Ant_Colony_Optimization_v1/Ant_Colony_Optimization_v1_variant_05.cpp",
+  "variant_number": 5,
+  "variant_profile": "duplicate-heavy",
+  "variant_profile_description": "Use repeated values, ties, duplicate keys, or repeated patterns where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 7515,
+    "completion_tokens": 4017,
+    "total_tokens": 11532
+  }
+}

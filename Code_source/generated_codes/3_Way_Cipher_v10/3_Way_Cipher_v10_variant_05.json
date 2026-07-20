@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T13:14:55.242504+00:00",
+  "request_started_at_utc": "2026-07-16T13:13:59.196585+00:00",
+  "duration_seconds": 56.046,
+  "source_file": "cpp_codes/3_Way_Cipher_v10.cpp",
+  "source_relative_path": "3_Way_Cipher_v10.cpp",
+  "source_sha256": "1aaa014db222348725c2060b892bbc18a0a1f97d770aac02f2dbeef0f0437080",
+  "source_bytes": 2891,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/3_Way_Cipher_v10/3_Way_Cipher_v10_variant_05.cpp",
+  "variant_number": 5,
+  "variant_profile": "duplicate-heavy",
+  "variant_profile_description": "Use repeated values, ties, duplicate keys, or repeated patterns where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4272,
+    "completion_tokens": 4848,
+    "total_tokens": 9120
+  }
+}

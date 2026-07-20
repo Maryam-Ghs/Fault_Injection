@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T03:32:47.728976+00:00",
+  "request_started_at_utc": "2026-07-17T03:32:35.903486+00:00",
+  "duration_seconds": 11.825,
+  "source_file": "cpp_codes/Affine_Transformation_2D_v10.cpp",
+  "source_relative_path": "Affine_Transformation_2D_v10.cpp",
+  "source_sha256": "12c5b13555bcdcb1f698ebba854a05cb1f963d498804fb71bee8608bdd0df4ee",
+  "source_bytes": 1652,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Affine_Transformation_2D_v10/Affine_Transformation_2D_v10_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4032,
+    "completion_tokens": 984,
+    "total_tokens": 5016
+  }
+}

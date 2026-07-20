@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T23:03:14.193652+00:00",
+  "request_started_at_utc": "2026-07-16T23:02:30.432923+00:00",
+  "duration_seconds": 43.761,
+  "source_file": "cpp_codes/AES_128_GCM_v6.cpp",
+  "source_relative_path": "AES_128_GCM_v6.cpp",
+  "source_sha256": "025d78659fbd56a40ddd5fc7ed5637596b4c23504b70490fa54de8c87648e6fe",
+  "source_bytes": 10031,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AES_128_GCM_v6/AES_128_GCM_v6_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 7118,
+    "completion_tokens": 4080,
+    "total_tokens": 11198
+  }
+}

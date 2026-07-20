@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T18:32:31.698739+00:00",
+  "request_started_at_utc": "2026-07-16T18:32:15.866007+00:00",
+  "duration_seconds": 15.833,
+  "source_file": "cpp_codes/Adams_Bashforth_Method_v8.cpp",
+  "source_relative_path": "Adams_Bashforth_Method_v8.cpp",
+  "source_sha256": "f40ebe9b6815e5b5220125c5ffddb8a0faa29e32293ffeedfbc6b448d0f403cc",
+  "source_bytes": 3715,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adams_Bashforth_Method_v8/Adams_Bashforth_Method_v8_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 2,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4328,
+    "completion_tokens": 1369,
+    "total_tokens": 5697
+  }
+}

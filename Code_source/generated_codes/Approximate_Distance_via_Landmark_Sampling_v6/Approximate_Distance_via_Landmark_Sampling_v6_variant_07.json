@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T07:49:11.106550+00:00",
+  "request_started_at_utc": "2026-07-17T07:48:40.133090+00:00",
+  "duration_seconds": 30.973,
+  "source_file": "cpp_codes/Approximate_Distance_via_Landmark_Sampling_v6.cpp",
+  "source_relative_path": "Approximate_Distance_via_Landmark_Sampling_v6.cpp",
+  "source_sha256": "aff4b89ba6ba359ad0b4fe458901588c784a19fa7fe544b11070b033c37ab4e8",
+  "source_bytes": 5786,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Approximate_Distance_via_Landmark_Sampling_v6/Approximate_Distance_via_Landmark_Sampling_v6_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5048,
+    "completion_tokens": 2464,
+    "total_tokens": 7512
+  }
+}

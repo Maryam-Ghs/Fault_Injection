@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T06:12:13.742891+00:00",
+  "request_started_at_utc": "2026-07-17T06:11:45.725909+00:00",
+  "duration_seconds": 28.017,
+  "source_file": "cpp_codes/Alternating_Least_Squares_v4.cpp",
+  "source_relative_path": "Alternating_Least_Squares_v4.cpp",
+  "source_sha256": "fbe662478f096df4f8f9f82bb3bf77b8922339778c25c78e1ee2ee79f2a4ce22",
+  "source_bytes": 5995,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Alternating_Least_Squares_v4/Alternating_Least_Squares_v4_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5414,
+    "completion_tokens": 2430,
+    "total_tokens": 7844
+  }
+}

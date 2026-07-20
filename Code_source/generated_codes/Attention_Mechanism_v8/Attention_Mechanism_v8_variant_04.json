@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:29:57.040471+00:00",
+  "source_file": "cpp_codes/Attention_Mechanism_v8.cpp",
+  "source_relative_path": "Attention_Mechanism_v8.cpp",
+  "source_sha256": "a817775dbde64a5823ce734bfd9917341c9c43318cdb9507e6b05a7a3077f093",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:59:10.675571+00:00",
+  "source_file": "cpp_codes/Bairstow’s_Method_v1.cpp",
+  "source_relative_path": "Bairstow’s_Method_v1.cpp",
+  "source_sha256": "3f26dd8b2d7c96a3a2ce43ef93d0275092b856e9f1144cb90d3b3690f538bc39",
+  "variant_number": 2,
+  "variant_profile": "small-diverse",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

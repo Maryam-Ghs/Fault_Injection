@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T14:34:05.748894+00:00",
+  "request_started_at_utc": "2026-07-16T14:33:09.875713+00:00",
+  "duration_seconds": 55.873,
+  "source_file": "cpp_codes/3DES_EDE3_v8.cpp",
+  "source_relative_path": "3DES_EDE3_v8.cpp",
+  "source_sha256": "dba7116c63248d3af8185b3a94d83b97c0d240bd5d086d3e82ec25b1543d3825",
+  "source_bytes": 14126,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/3DES_EDE3_v8/3DES_EDE3_v8_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 8128,
+    "completion_tokens": 5099,
+    "total_tokens": 13227
+  }
+}

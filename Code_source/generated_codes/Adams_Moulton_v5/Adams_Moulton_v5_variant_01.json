@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T18:57:54.758190+00:00",
+  "request_started_at_utc": "2026-07-16T18:57:40.482684+00:00",
+  "duration_seconds": 14.276,
+  "source_file": "cpp_codes/Adams_Moulton_v5.cpp",
+  "source_relative_path": "Adams_Moulton_v5.cpp",
+  "source_sha256": "6c308f4dacf22e1aaff4f5203dc587ab79a56044db31356c423b16f431fa6bca",
+  "source_bytes": 2236,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adams_Moulton_v5/Adams_Moulton_v5_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4139,
+    "completion_tokens": 1232,
+    "total_tokens": 5371
+  }
+}

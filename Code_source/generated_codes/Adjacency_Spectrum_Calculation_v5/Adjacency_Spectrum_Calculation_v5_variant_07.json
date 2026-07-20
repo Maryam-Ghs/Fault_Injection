@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:57:19.814840+00:00",
+  "request_started_at_utc": "2026-07-16T20:56:51.948443+00:00",
+  "duration_seconds": 27.866,
+  "source_file": "cpp_codes/Adjacency_Spectrum_Calculation_v5.cpp",
+  "source_relative_path": "Adjacency_Spectrum_Calculation_v5.cpp",
+  "source_sha256": "32dea92ceae6caa9e9450546270140cae4236f09a73650518673f88bb2ac89d2",
+  "source_bytes": 5752,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adjacency_Spectrum_Calculation_v5/Adjacency_Spectrum_Calculation_v5_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4855,
+    "completion_tokens": 2427,
+    "total_tokens": 7282
+  }
+}

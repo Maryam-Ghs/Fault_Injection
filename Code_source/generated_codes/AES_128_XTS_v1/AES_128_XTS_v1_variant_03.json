@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T00:01:40.197908+00:00",
+  "request_started_at_utc": "2026-07-17T00:01:02.161351+00:00",
+  "duration_seconds": 38.037,
+  "source_file": "cpp_codes/AES_128_XTS_v1.cpp",
+  "source_relative_path": "AES_128_XTS_v1.cpp",
+  "source_sha256": "ab43b89a4016eba1db8a2f3edb46bbf46048f9250256d1a48e3e65a08f647aed",
+  "source_bytes": 8707,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AES_128_XTS_v1/AES_128_XTS_v1_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 6441,
+    "completion_tokens": 3477,
+    "total_tokens": 9918
+  }
+}

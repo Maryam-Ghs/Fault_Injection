@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T13:18:57.835488+00:00",
+  "request_started_at_utc": "2026-07-16T13:18:41.664984+00:00",
+  "duration_seconds": 16.171,
+  "source_file": "cpp_codes/3_Way_Cipher_v4.cpp",
+  "source_relative_path": "3_Way_Cipher_v4.cpp",
+  "source_sha256": "c2b2933d54962e0bc6c80887049df24103e78379769c873b395dfd4fda04410a",
+  "source_bytes": 2806,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/3_Way_Cipher_v4/3_Way_Cipher_v4_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4148,
+    "completion_tokens": 1491,
+    "total_tokens": 5639
+  }
+}

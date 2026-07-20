@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:57:06.997608+00:00",
+  "source_file": "cpp_codes/Bagging_v6.cpp",
+  "source_relative_path": "Bagging_v6.cpp",
+  "source_sha256": "93ff26b726763d47701f12ef815309e90d674ce0c7825509f6db2763f5590127",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

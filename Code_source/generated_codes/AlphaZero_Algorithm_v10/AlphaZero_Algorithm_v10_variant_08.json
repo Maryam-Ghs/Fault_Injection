@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T05:54:24.071269+00:00",
+  "request_started_at_utc": "2026-07-17T05:53:39.957331+00:00",
+  "duration_seconds": 44.114,
+  "source_file": "cpp_codes/AlphaZero_Algorithm_v10.cpp",
+  "source_relative_path": "AlphaZero_Algorithm_v10.cpp",
+  "source_sha256": "89d9fe41af084bdeab8d1fed7ed103b322363b0813050a73b7d6a9c5fbac000a",
+  "source_bytes": 13984,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AlphaZero_Algorithm_v10/AlphaZero_Algorithm_v10_variant_08.cpp",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "variant_profile_description": "Use sparse, imbalanced, clustered, skewed, or mostly-empty input where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 6949,
+    "completion_tokens": 3859,
+    "total_tokens": 10808
+  }
+}

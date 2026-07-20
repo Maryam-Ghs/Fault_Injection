@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T12:54:53.469685+00:00",
+  "request_started_at_utc": "2026-07-16T12:54:32.248705+00:00",
+  "duration_seconds": 21.221,
+  "source_file": "cpp_codes/2_Opt_Heuristic_TSP_v9.cpp",
+  "source_relative_path": "2_Opt_Heuristic_TSP_v9.cpp",
+  "source_sha256": "ed393620cc7501459ef0e30727bc268d125fdc2f7573df52ce6089792ffcf932",
+  "source_bytes": 7423,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/2_Opt_Heuristic_TSP_v9/2_Opt_Heuristic_TSP_v9_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4990,
+    "completion_tokens": 1813,
+    "total_tokens": 6803
+  }
+}

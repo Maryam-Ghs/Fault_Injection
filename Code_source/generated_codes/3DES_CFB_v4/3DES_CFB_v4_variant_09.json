@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T13:56:18.830549+00:00",
+  "request_started_at_utc": "2026-07-16T13:55:57.761766+00:00",
+  "duration_seconds": 21.069,
+  "source_file": "cpp_codes/3DES_CFB_v4.cpp",
+  "source_relative_path": "3DES_CFB_v4.cpp",
+  "source_sha256": "e2541499ec99749f1c883ce7736aefb319e08d83211c453b985b525e1cda0cef",
+  "source_bytes": 6145,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/3DES_CFB_v4/3DES_CFB_v4_variant_09.cpp",
+  "variant_number": 9,
+  "variant_profile": "medium-deterministic-random",
+  "variant_profile_description": "Use a medium-sized, diverse, deterministic pseudo-random-looking input. Do not depend on the current time or an unspecified random seed.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4869,
+    "completion_tokens": 1823,
+    "total_tokens": 6692
+  }
+}

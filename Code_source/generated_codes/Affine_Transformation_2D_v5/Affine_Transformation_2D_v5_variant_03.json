@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T03:36:04.874938+00:00",
+  "request_started_at_utc": "2026-07-17T03:35:43.465189+00:00",
+  "duration_seconds": 21.41,
+  "source_file": "cpp_codes/Affine_Transformation_2D_v5.cpp",
+  "source_relative_path": "Affine_Transformation_2D_v5.cpp",
+  "source_sha256": "78d6b532aec1270f270c8dc07abb2b53152d7e0ee0b7c9568b9ce6a8b096bc0d",
+  "source_bytes": 4655,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Affine_Transformation_2D_v5/Affine_Transformation_2D_v5_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4720,
+    "completion_tokens": 1907,
+    "total_tokens": 6627
+  }
+}

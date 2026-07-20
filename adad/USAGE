@@ -1,0 +1,74 @@
+The "main.cpp" is a generic main driver which can link with any of
+the sort (and potentially other) functions. It expects to call a
+function that has the signature:
+
+         extern int Function(int *A, int size, int verbose);
+
+where <A> is an array of integers of length <size>, and <verbose>
+is a flag that says wether we want detailed printouts.
+
+main.cpp has the following options:
+
+    -l          do one run and print the ids
+    -n <N>	set the size of the array [100]
+    -m <M>	set the number of monte-carlo trials [1]
+    -p <i,P>	probability of a fault at the specified id [0.0]
+    -s <S>	specify random integer seed [use time()]
+    -v		be quite verbose [no, be quiet]
+    -h		print this help
+
+so the basic usage is to make one of the sort programs, run it with
+the -l option to get the location ides, and then run it with the -m
+and -p options to inject errors.
+
+step 1: making:
+
+SDConLLM/adad$ make selection
+g++ -O3 -flto   -c -o selection.o selection.cpp
+g++ -O3 -flto   -c -o hash.o hash.cpp
+g++ -O3 -flto   -c -o adad.o adad.cpp
+g++ -O3 -flto   -c -o fault.o fault.cpp
+g++ -O3 -flto   -c -o main.o main.cpp
+g++ -O3 -flto -o selection selection.o hash.o adad.o fault.o main.o
+
+step 2: listing the fault locations
+
+SDConLLM/adad$ ./selection -l
+SEED=839109 
+Fault Locations:
+	id	description
+	7	A!=A2   selection                           0x0000000107222d9a main + 714
+	6	A+=K2   selection                           0x0000000107222d9a main + 714
+	3	A<A2   selection                           0x0000000107222d9a main + 714
+	5	A=A+K2   selection                           0x0000000107222d9a main + 714
+	2	A=A-K2   selection                           0x0000000107222d9a main + 714
+	4	A=A2   selection                           0x0000000107222d9a main + 714
+	1	A=K2   selection                           0x0000000107222d9a main + 714
+
+id is the fault id, the description shows:
+    the operator (e.g. A=A+K)
+    the name of the function in which that operator is
+    the offset of that operator in the binary program
+
+note: there is an extra "2" after the operator which should be ignored
+otherwise the operator has "A" for a adad, "K" for a constanct, and
+the usual operators otherwise
+
+step 3: run the code:
+
+SDConLLM/adad$ ./selection -m 20 -p 3,1
+SEED=503695 
+./selection 
+	size	100	trials	20
+	sdc	20	core	0
+Injection Fault_Probs:
+	id	prob
+	3	1
+Fault Counts:
+	3	20
+
+the above ran 20 calls, injecting errors at id #3 with 100% probability
+and it produced 20 sdc, and 0 core dumps
+
+The core dumps are flagged when the code tries to access the array outside
+its bounds

@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T03:38:36.069306+00:00",
+  "request_started_at_utc": "2026-07-17T03:38:14.967105+00:00",
+  "duration_seconds": 21.102,
+  "source_file": "cpp_codes/Affine_Transformation_2D_v6.cpp",
+  "source_relative_path": "Affine_Transformation_2D_v6.cpp",
+  "source_sha256": "8b62c1afe05e1ecd2d701331b9602ba7fc86358f988b03452bd56d8a52146d0d",
+  "source_bytes": 4013,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Affine_Transformation_2D_v6/Affine_Transformation_2D_v6_variant_08.cpp",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "variant_profile_description": "Use sparse, imbalanced, clustered, skewed, or mostly-empty input where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4842,
+    "completion_tokens": 1979,
+    "total_tokens": 6821
+  }
+}

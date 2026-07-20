@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T06:22:51.884520+00:00",
+  "request_started_at_utc": "2026-07-17T06:22:31.456887+00:00",
+  "duration_seconds": 20.428,
+  "source_file": "cpp_codes/AmsGrad_v3.cpp",
+  "source_relative_path": "AmsGrad_v3.cpp",
+  "source_sha256": "be6a1f1dc0b31ae5ce47d7395a964d56c7489a8a76a4f42aa84f5b307d3d535c",
+  "source_bytes": 4806,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AmsGrad_v3/AmsGrad_v3_variant_02.cpp",
+  "variant_number": 2,
+  "variant_profile": "small-diverse",
+  "variant_profile_description": "Use a small input containing varied ordinary values and structures.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4945,
+    "completion_tokens": 1676,
+    "total_tokens": 6621
+  }
+}

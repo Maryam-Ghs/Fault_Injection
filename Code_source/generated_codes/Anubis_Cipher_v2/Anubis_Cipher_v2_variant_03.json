@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T07:14:48.222875+00:00",
+  "request_started_at_utc": "2026-07-17T07:14:21.617549+00:00",
+  "duration_seconds": 26.605,
+  "source_file": "cpp_codes/Anubis_Cipher_v2.cpp",
+  "source_relative_path": "Anubis_Cipher_v2.cpp",
+  "source_sha256": "83b03fd2bd317b831e53d5997d677d7bfddd842b45ddf7402248ff0c2e6f5b85",
+  "source_bytes": 6262,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Anubis_Cipher_v2/Anubis_Cipher_v2_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 6265,
+    "completion_tokens": 2260,
+    "total_tokens": 8525
+  }
+}

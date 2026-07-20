@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T15:21:05.729477+00:00",
+  "request_started_at_utc": "2026-07-16T15:20:27.819716+00:00",
+  "duration_seconds": 37.91,
+  "source_file": "cpp_codes/A*_Search_Algorithm_v3.cpp",
+  "source_relative_path": "A*_Search_Algorithm_v3.cpp",
+  "source_sha256": "4ef42a9427e82809057c39e296a1dd78bf14bfc9023876125adf166f11d30498",
+  "source_bytes": 8231,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/A*_Search_Algorithm_v3/A*_Search_Algorithm_v3_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5337,
+    "completion_tokens": 3150,
+    "total_tokens": 8487
+  }
+}

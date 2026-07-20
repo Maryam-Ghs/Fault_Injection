@@ -1,0 +1,37 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T10:15:22.258394+00:00",
+  "request_started_at_utc": "2026-07-17T10:11:05.314831+00:00",
+  "duration_seconds": 256.94,
+  "source_file": "cpp_codes/ARIA_CBC_v3.cpp",
+  "source_relative_path": "ARIA_CBC_v3.cpp",
+  "source_sha256": "858e9afbe5e2e116934a2f8062b4f0eeb073e3aed1f37a78aefdb6c5a3816be9",
+  "source_bytes": 24599,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ARIA_CBC_v3/ARIA_CBC_v3_variant_08.cpp",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "variant_profile_description": "Use sparse, imbalanced, clustered, skewed, or mostly-empty input where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "request_id": "ab1603f4-e56f-40ca-9c73-c84a70f3ea01",
+  "api_call_number_in_this_run": 16,
+  "variants_requested_in_same_call": [
+    6,
+    7,
+    8
+  ],
+  "batch_size": 3,
+  "batch_attempt": 1,
+  "split_depth": 1,
+  "finish_reason": "stop",
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage_for_whole_batch": {
+    "prompt_tokens": 14088,
+    "completion_tokens": 18158,
+    "total_tokens": 32246
+  }
+}

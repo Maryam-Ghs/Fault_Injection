@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T16:10:37.303707+00:00",
+  "request_started_at_utc": "2026-07-16T16:10:20.052080+00:00",
+  "duration_seconds": 17.252,
+  "source_file": "cpp_codes/A5_1_v8.cpp",
+  "source_relative_path": "A5_1_v8.cpp",
+  "source_sha256": "0eef3d5f7ae1f6e3369101f03fedb222b410ffe43791d2256423fc35a063ba49",
+  "source_bytes": 3023,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/A5_1_v8/A5_1_v8_variant_05.cpp",
+  "variant_number": 5,
+  "variant_profile": "duplicate-heavy",
+  "variant_profile_description": "Use repeated values, ties, duplicate keys, or repeated patterns where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4373,
+    "completion_tokens": 1642,
+    "total_tokens": 6015
+  }
+}

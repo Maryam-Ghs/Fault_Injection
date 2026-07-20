@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T18:15:31.302828+00:00",
+  "request_started_at_utc": "2026-07-16T18:15:10.418291+00:00",
+  "duration_seconds": 20.885,
+  "source_file": "cpp_codes/AdaMax_v4.cpp",
+  "source_relative_path": "AdaMax_v4.cpp",
+  "source_sha256": "93605c1ca82ba6203352b1e9378e6ea6fd05df66e4676cfd5aeda5e54ac29310",
+  "source_bytes": 5421,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AdaMax_v4/AdaMax_v4_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4843,
+    "completion_tokens": 1914,
+    "total_tokens": 6757
+  }
+}

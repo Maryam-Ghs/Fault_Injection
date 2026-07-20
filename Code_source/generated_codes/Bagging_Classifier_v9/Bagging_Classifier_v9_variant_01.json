@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:54:37.268397+00:00",
+  "source_file": "cpp_codes/Bagging_Classifier_v9.cpp",
+  "source_relative_path": "Bagging_Classifier_v9.cpp",
+  "source_sha256": "156b3d45ee53ff556f0844af0f0e12ee99bd551b1f76b1ad5a9d24b8ce1a6a9e",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

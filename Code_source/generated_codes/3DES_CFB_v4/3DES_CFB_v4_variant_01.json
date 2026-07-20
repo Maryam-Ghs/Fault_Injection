@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T13:55:01.960057+00:00",
+  "request_started_at_utc": "2026-07-16T13:54:40.914345+00:00",
+  "duration_seconds": 21.046,
+  "source_file": "cpp_codes/3DES_CFB_v4.cpp",
+  "source_relative_path": "3DES_CFB_v4.cpp",
+  "source_sha256": "e2541499ec99749f1c883ce7736aefb319e08d83211c453b985b525e1cda0cef",
+  "source_bytes": 6145,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/3DES_CFB_v4/3DES_CFB_v4_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4850,
+    "completion_tokens": 1628,
+    "total_tokens": 6478
+  }
+}

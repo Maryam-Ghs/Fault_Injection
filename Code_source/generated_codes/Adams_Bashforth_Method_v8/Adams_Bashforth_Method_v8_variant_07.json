@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T18:32:46.458466+00:00",
+  "request_started_at_utc": "2026-07-16T18:32:32.465635+00:00",
+  "duration_seconds": 13.993,
+  "source_file": "cpp_codes/Adams_Bashforth_Method_v8.cpp",
+  "source_relative_path": "Adams_Bashforth_Method_v8.cpp",
+  "source_sha256": "f40ebe9b6815e5b5220125c5ffddb8a0faa29e32293ffeedfbc6b448d0f403cc",
+  "source_bytes": 3715,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adams_Bashforth_Method_v8/Adams_Bashforth_Method_v8_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4337,
+    "completion_tokens": 1327,
+    "total_tokens": 5664
+  }
+}

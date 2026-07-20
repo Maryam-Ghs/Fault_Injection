@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T17:02:00.054263+00:00",
+  "request_started_at_utc": "2026-07-16T17:01:26.918958+00:00",
+  "duration_seconds": 33.135,
+  "source_file": "cpp_codes/Actor_Critic_with_Experience_Replay_v2.cpp",
+  "source_relative_path": "Actor_Critic_with_Experience_Replay_v2.cpp",
+  "source_sha256": "c493407756649c7cf03a68b63ed001ac93b1fe28e1c5a79bb8dc6874f8ea39b1",
+  "source_bytes": 9354,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Actor_Critic_with_Experience_Replay_v2/Actor_Critic_with_Experience_Replay_v2_variant_05.cpp",
+  "variant_number": 5,
+  "variant_profile": "duplicate-heavy",
+  "variant_profile_description": "Use repeated values, ties, duplicate keys, or repeated patterns where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5662,
+    "completion_tokens": 3213,
+    "total_tokens": 8875
+  }
+}

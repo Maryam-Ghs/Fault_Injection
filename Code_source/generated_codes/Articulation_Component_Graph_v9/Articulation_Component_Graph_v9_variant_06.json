@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:18:59.696586+00:00",
+  "source_file": "cpp_codes/Articulation_Component_Graph_v9.cpp",
+  "source_relative_path": "Articulation_Component_Graph_v9.cpp",
+  "source_sha256": "c24babff73ff1154c2964f9800f2fa5f3c2da2951f6a36f9129d706ad9dd222a",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

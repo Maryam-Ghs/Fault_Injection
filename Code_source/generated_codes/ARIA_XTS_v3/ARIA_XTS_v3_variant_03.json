@@ -1,0 +1,38 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T12:12:22.093564+00:00",
+  "request_started_at_utc": "2026-07-17T12:06:59.762756+00:00",
+  "duration_seconds": 322.328,
+  "source_file": "cpp_codes/ARIA_XTS_v3.cpp",
+  "source_relative_path": "ARIA_XTS_v3.cpp",
+  "source_sha256": "14b55bf66fe03b220e977a0f96bdaef945e5ca69e84f0af530b9634f158fb7eb",
+  "source_bytes": 13421,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ARIA_XTS_v3/ARIA_XTS_v3_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "request_id": "b89afd90-cb2e-4bb3-bbad-bb18d6f836e4",
+  "api_call_number_in_this_run": 119,
+  "variants_requested_in_same_call": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "batch_size": 4,
+  "batch_attempt": 2,
+  "split_depth": 1,
+  "finish_reason": "stop",
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage_for_whole_batch": {
+    "prompt_tokens": 9503,
+    "completion_tokens": 21618,
+    "total_tokens": 31121
+  }
+}

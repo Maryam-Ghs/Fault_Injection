@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T16:37:26.273791+00:00",
+  "request_started_at_utc": "2026-07-16T16:37:14.941046+00:00",
+  "duration_seconds": 11.333,
+  "source_file": "cpp_codes/ACORN_v10.cpp",
+  "source_relative_path": "ACORN_v10.cpp",
+  "source_sha256": "8098b32bee9b9b91636d206088345234722b2ad4c30480db071b792fe198c467",
+  "source_bytes": 2280,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ACORN_v10/ACORN_v10_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4028,
+    "completion_tokens": 894,
+    "total_tokens": 4922
+  }
+}

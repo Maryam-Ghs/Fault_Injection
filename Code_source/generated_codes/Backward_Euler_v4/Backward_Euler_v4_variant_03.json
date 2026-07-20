@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:53:16.508591+00:00",
+  "source_file": "cpp_codes/Backward_Euler_v4.cpp",
+  "source_relative_path": "Backward_Euler_v4.cpp",
+  "source_sha256": "eb542c19bd22805135a05dd29ae64a25e64b94f82151a5219947e977f9ad3ebe",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

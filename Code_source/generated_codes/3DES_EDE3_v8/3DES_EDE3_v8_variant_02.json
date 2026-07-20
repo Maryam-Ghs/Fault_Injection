@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T14:33:16.867168+00:00",
+  "request_started_at_utc": "2026-07-16T14:32:21.320140+00:00",
+  "duration_seconds": 55.547,
+  "source_file": "cpp_codes/3DES_EDE3_v8.cpp",
+  "source_relative_path": "3DES_EDE3_v8.cpp",
+  "source_sha256": "dba7116c63248d3af8185b3a94d83b97c0d240bd5d086d3e82ec25b1543d3825",
+  "source_bytes": 14126,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/3DES_EDE3_v8/3DES_EDE3_v8_variant_02.cpp",
+  "variant_number": 2,
+  "variant_profile": "small-diverse",
+  "variant_profile_description": "Use a small input containing varied ordinary values and structures.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 8120,
+    "completion_tokens": 5086,
+    "total_tokens": 13206
+  }
+}

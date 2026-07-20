@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:13:35.186828+00:00",
+  "request_started_at_utc": "2026-07-16T20:13:18.789712+00:00",
+  "duration_seconds": 16.397,
+  "source_file": "cpp_codes/Adaptive_Step_Runge_Kutta_v8.cpp",
+  "source_relative_path": "Adaptive_Step_Runge_Kutta_v8.cpp",
+  "source_sha256": "9e1f5421aff95b38ff76998e889363e433cf7d97cced41576fc0892117dca691",
+  "source_bytes": 4950,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adaptive_Step_Runge_Kutta_v8/Adaptive_Step_Runge_Kutta_v8_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the program's intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4836,
+    "completion_tokens": 1805,
+    "total_tokens": 6641
+  }
+}

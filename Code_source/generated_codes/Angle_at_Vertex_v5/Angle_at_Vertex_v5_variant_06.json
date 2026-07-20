@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T06:36:51.271264+00:00",
+  "request_started_at_utc": "2026-07-17T06:36:36.978569+00:00",
+  "duration_seconds": 14.293,
+  "source_file": "cpp_codes/Angle_at_Vertex_v5.cpp",
+  "source_relative_path": "Angle_at_Vertex_v5.cpp",
+  "source_sha256": "4cf122ed6ce885e016bb9f2e05a90f13aadc279928ac4464f584664193c6f8f0",
+  "source_bytes": 2176,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Angle_at_Vertex_v5/Angle_at_Vertex_v5_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4054,
+    "completion_tokens": 1165,
+    "total_tokens": 5219
+  }
+}

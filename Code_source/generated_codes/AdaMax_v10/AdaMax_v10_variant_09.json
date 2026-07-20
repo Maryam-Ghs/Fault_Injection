@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T18:11:37.119663+00:00",
+  "request_started_at_utc": "2026-07-16T18:11:17.643480+00:00",
+  "duration_seconds": 19.476,
+  "source_file": "cpp_codes/AdaMax_v10.cpp",
+  "source_relative_path": "AdaMax_v10.cpp",
+  "source_sha256": "24c4a4120a8bb24f64802363489c734a240c45c516b17b05bdfe37ceda1e364e",
+  "source_bytes": 4551,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AdaMax_v10/AdaMax_v10_variant_09.cpp",
+  "variant_number": 9,
+  "variant_profile": "medium-deterministic-random",
+  "variant_profile_description": "Use a medium-sized, diverse, deterministic pseudo-random-looking input. Do not depend on the current time or an unspecified random seed.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4557,
+    "completion_tokens": 1698,
+    "total_tokens": 6255
+  }
+}

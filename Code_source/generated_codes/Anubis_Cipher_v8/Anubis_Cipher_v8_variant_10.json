@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T07:27:11.673554+00:00",
+  "request_started_at_utc": "2026-07-17T07:26:40.336905+00:00",
+  "duration_seconds": 31.337,
+  "source_file": "cpp_codes/Anubis_Cipher_v8.cpp",
+  "source_relative_path": "Anubis_Cipher_v8.cpp",
+  "source_sha256": "21aeaa755e07d18415b91ec1d9e5eef58eed44dc1b3d223baeb4bb3ab5b74bd9",
+  "source_bytes": 7002,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Anubis_Cipher_v8/Anubis_Cipher_v8_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the program's intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 6468,
+    "completion_tokens": 3540,
+    "total_tokens": 10008
+  }
+}

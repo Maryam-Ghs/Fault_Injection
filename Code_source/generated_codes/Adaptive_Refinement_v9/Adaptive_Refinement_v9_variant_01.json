@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T20:01:45.429820+00:00",
+  "request_started_at_utc": "2026-07-16T20:01:25.195393+00:00",
+  "duration_seconds": 20.234,
+  "source_file": "cpp_codes/Adaptive_Refinement_v9.cpp",
+  "source_relative_path": "Adaptive_Refinement_v9.cpp",
+  "source_sha256": "f0b5a4a573df9f576917c4047379f03ee366a5002110d0c5688a20eaa99f0768",
+  "source_bytes": 3604,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adaptive_Refinement_v9/Adaptive_Refinement_v9_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4434,
+    "completion_tokens": 1574,
+    "total_tokens": 6008
+  }
+}

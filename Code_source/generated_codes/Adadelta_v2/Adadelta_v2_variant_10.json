@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T17:25:40.329081+00:00",
+  "request_started_at_utc": "2026-07-16T17:25:29.058419+00:00",
+  "duration_seconds": 11.271,
+  "source_file": "cpp_codes/Adadelta_v2.cpp",
+  "source_relative_path": "Adadelta_v2.cpp",
+  "source_sha256": "98587787150190937b2fb43799016fc1ddb6229889425a5f5219a0a28e9535bf",
+  "source_bytes": 4068,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adadelta_v2/Adadelta_v2_variant_10.cpp",
+  "variant_number": 10,
+  "variant_profile": "large-safe-stress",
+  "variant_profile_description": "Use a relatively large stress input that remains safe for memory, runtime, array bounds, integer ranges, and the program's intended environment.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4410,
+    "completion_tokens": 1193,
+    "total_tokens": 5603
+  }
+}

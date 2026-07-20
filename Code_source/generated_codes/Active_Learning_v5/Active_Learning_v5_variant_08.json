@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T16:52:28.987515+00:00",
+  "request_started_at_utc": "2026-07-16T16:52:04.071938+00:00",
+  "duration_seconds": 24.916,
+  "source_file": "cpp_codes/Active_Learning_v5.cpp",
+  "source_relative_path": "Active_Learning_v5.cpp",
+  "source_sha256": "ef90e4c46b42d2b7cc2414e28a4fb70c24ad766e095bd0b70472232223ad6483",
+  "source_bytes": 6601,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Active_Learning_v5/Active_Learning_v5_variant_08.cpp",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "variant_profile_description": "Use sparse, imbalanced, clustered, skewed, or mostly-empty input where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5167,
+    "completion_tokens": 2244,
+    "total_tokens": 7411
+  }
+}

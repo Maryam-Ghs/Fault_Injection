@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T03:00:14.062166+00:00",
+  "request_started_at_utc": "2026-07-17T02:59:22.050431+00:00",
+  "duration_seconds": 52.012,
+  "source_file": "cpp_codes/AES_256_OFB_v9.cpp",
+  "source_relative_path": "AES_256_OFB_v9.cpp",
+  "source_sha256": "6db1b0d237409cfcabf3c885915d096cb239788294d59d4cf73b352dfdaaec2a",
+  "source_bytes": 11763,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AES_256_OFB_v9/AES_256_OFB_v9_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 7777,
+    "completion_tokens": 4666,
+    "total_tokens": 12443
+  }
+}

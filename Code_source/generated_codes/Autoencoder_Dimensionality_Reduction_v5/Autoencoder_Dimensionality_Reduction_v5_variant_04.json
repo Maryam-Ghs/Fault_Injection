@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:35:20.343241+00:00",
+  "source_file": "cpp_codes/Autoencoder_Dimensionality_Reduction_v5.cpp",
+  "source_relative_path": "Autoencoder_Dimensionality_Reduction_v5.cpp",
+  "source_sha256": "b388d22fc8d8f69db486335abc71bea69998a05cc12ae25d88c827d71214b945",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

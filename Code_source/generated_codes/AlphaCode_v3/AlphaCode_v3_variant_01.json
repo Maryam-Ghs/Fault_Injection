@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T05:42:41.190480+00:00",
+  "request_started_at_utc": "2026-07-17T05:42:25.271161+00:00",
+  "duration_seconds": 15.919,
+  "source_file": "cpp_codes/AlphaCode_v3.cpp",
+  "source_relative_path": "AlphaCode_v3.cpp",
+  "source_sha256": "c38cd4e412a92d0880f5ba3be6e9f3c5a140180e0f3061aaa72b47e45487e22c",
+  "source_bytes": 3668,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AlphaCode_v3/AlphaCode_v3_variant_01.cpp",
+  "variant_number": 1,
+  "variant_profile": "minimal-boundary",
+  "variant_profile_description": "Use the smallest valid nontrivial input sizes and boundary-valid values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4387,
+    "completion_tokens": 1363,
+    "total_tokens": 5750
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T13:24:48.093619+00:00",
+  "request_started_at_utc": "2026-07-16T13:24:37.278012+00:00",
+  "duration_seconds": 10.816,
+  "source_file": "cpp_codes/3_Way_Cipher_v9.cpp",
+  "source_relative_path": "3_Way_Cipher_v9.cpp",
+  "source_sha256": "b28bb91b7b095152968656a378172d1673a6c4b33acd312c8670ad29e5236d6c",
+  "source_bytes": 2755,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/3_Way_Cipher_v9/3_Way_Cipher_v9_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4132,
+    "completion_tokens": 1000,
+    "total_tokens": 5132
+  }
+}

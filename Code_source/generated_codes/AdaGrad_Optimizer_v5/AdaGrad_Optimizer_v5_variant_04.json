@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T17:41:02.681403+00:00",
+  "request_started_at_utc": "2026-07-16T17:40:44.538511+00:00",
+  "duration_seconds": 18.143,
+  "source_file": "cpp_codes/AdaGrad_Optimizer_v5.cpp",
+  "source_relative_path": "AdaGrad_Optimizer_v5.cpp",
+  "source_sha256": "f5f99b03ba2b3235201756c294ba055eb25e937f98f6872d91a1bb90d2001f2b",
+  "source_bytes": 5244,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AdaGrad_Optimizer_v5/AdaGrad_Optimizer_v5_variant_04.cpp",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "variant_profile_description": "Where data types and the algorithm permit it, mix negative, zero, and positive values while avoiding undefined behavior and unsafe overflow.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4632,
+    "completion_tokens": 1607,
+    "total_tokens": 6239
+  }
+}

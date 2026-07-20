@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T17:52:34.583025+00:00",
+  "request_started_at_utc": "2026-07-16T17:52:19.527498+00:00",
+  "duration_seconds": 15.056,
+  "source_file": "cpp_codes/Adagrad_v4.cpp",
+  "source_relative_path": "Adagrad_v4.cpp",
+  "source_sha256": "ac73bacc6f45953f7ec34142bfd223bd216c7c860a40909888118b22794a904b",
+  "source_bytes": 2352,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adagrad_v4/Adagrad_v4_variant_07.cpp",
+  "variant_number": 7,
+  "variant_profile": "reverse-adversarial",
+  "variant_profile_description": "Use reverse-ordered, awkward, worst-case-like, or adversarial input where relevant, but keep runtime practical and behavior defined.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4293,
+    "completion_tokens": 1416,
+    "total_tokens": 5709
+  }
+}

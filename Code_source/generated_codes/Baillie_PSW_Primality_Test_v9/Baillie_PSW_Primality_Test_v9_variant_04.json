@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "created_at_utc": "2026-07-17T12:58:26.533133+00:00",
+  "source_file": "cpp_codes/Baillie_PSW_Primality_Test_v9.cpp",
+  "source_relative_path": "Baillie_PSW_Primality_Test_v9.cpp",
+  "source_sha256": "de8bdaa4758396f920475f424fe546363a3d74a4826a2eae5251c4cf9b81f28d",
+  "variant_number": 4,
+  "variant_profile": "signed-extremes",
+  "model": "kit.gpt-oss-120b",
+  "error": "InternalServerError: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>"
+}

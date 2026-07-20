@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T16:21:15.159491+00:00",
+  "request_started_at_utc": "2026-07-16T16:21:04.778181+00:00",
+  "duration_seconds": 10.381,
+  "source_file": "cpp_codes/A5_2_v10.cpp",
+  "source_relative_path": "A5_2_v10.cpp",
+  "source_sha256": "cb12e6d11b417e8165eb1f63f983da4703232727366f0da279b1367c655fdbc2",
+  "source_bytes": 1562,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/A5_2_v10/A5_2_v10_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 3828,
+    "completion_tokens": 803,
+    "total_tokens": 4631
+  }
+}

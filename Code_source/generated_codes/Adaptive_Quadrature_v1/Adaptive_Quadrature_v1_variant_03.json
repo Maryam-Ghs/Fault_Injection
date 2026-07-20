@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T19:34:43.958582+00:00",
+  "request_started_at_utc": "2026-07-16T19:34:15.075325+00:00",
+  "duration_seconds": 28.883,
+  "source_file": "cpp_codes/Adaptive_Quadrature_v1.cpp",
+  "source_relative_path": "Adaptive_Quadrature_v1.cpp",
+  "source_sha256": "41a26663fd6feb13d1ef2ea292a41cfd9e25691ffd10b6815864e4c2ca378179",
+  "source_bytes": 4906,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Adaptive_Quadrature_v1/Adaptive_Quadrature_v1_variant_03.cpp",
+  "variant_number": 3,
+  "variant_profile": "zeros-and-ones",
+  "variant_profile_description": "Emphasize zeros, ones, empty-like cases where valid, and identity values.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4675,
+    "completion_tokens": 2109,
+    "total_tokens": 6784
+  }
+}

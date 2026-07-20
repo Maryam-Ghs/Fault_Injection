@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-16T18:17:03.519890+00:00",
+  "request_started_at_utc": "2026-07-16T18:16:46.293833+00:00",
+  "duration_seconds": 17.226,
+  "source_file": "cpp_codes/AdaMax_v5.cpp",
+  "source_relative_path": "AdaMax_v5.cpp",
+  "source_sha256": "2abea2eb75f5f9343fca5d39f2dcc220da6ae68e00931acc877d82ca7a2c4ae1",
+  "source_bytes": 3330,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/AdaMax_v5/AdaMax_v5_variant_05.cpp",
+  "variant_number": 5,
+  "variant_profile": "duplicate-heavy",
+  "variant_profile_description": "Use repeated values, ties, duplicate keys, or repeated patterns where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 4694,
+    "completion_tokens": 1538,
+    "total_tokens": 6232
+  }
+}

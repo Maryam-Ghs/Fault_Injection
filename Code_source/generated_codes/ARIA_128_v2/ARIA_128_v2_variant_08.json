@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T08:15:11.260283+00:00",
+  "request_started_at_utc": "2026-07-17T08:14:25.619502+00:00",
+  "duration_seconds": 45.641,
+  "source_file": "cpp_codes/ARIA_128_v2.cpp",
+  "source_relative_path": "ARIA_128_v2.cpp",
+  "source_sha256": "7d22a84f23adcf46c7f436138c45afd9627d3b2a9e313a0476b5d2ff5dfdef08",
+  "source_bytes": 7855,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/ARIA_128_v2/ARIA_128_v2_variant_08.cpp",
+  "variant_number": 8,
+  "variant_profile": "sparse-skewed",
+  "variant_profile_description": "Use sparse, imbalanced, clustered, skewed, or mostly-empty input where relevant.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 7340,
+    "completion_tokens": 4312,
+    "total_tokens": 11652
+  }
+}

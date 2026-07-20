@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "created_at_utc": "2026-07-17T04:49:53.275840+00:00",
+  "request_started_at_utc": "2026-07-17T04:49:23.322642+00:00",
+  "duration_seconds": 29.953,
+  "source_file": "cpp_codes/Algebraic_Multigrid_v2.cpp",
+  "source_relative_path": "Algebraic_Multigrid_v2.cpp",
+  "source_sha256": "664c654f6b4658a38a051175a3cc3837a688a2cddc188be800183dd50f139f85",
+  "source_bytes": 11520,
+  "source_language": "C++",
+  "source_extension": ".cpp",
+  "output_file": "generated_codes/Algebraic_Multigrid_v2/Algebraic_Multigrid_v2_variant_06.cpp",
+  "variant_number": 6,
+  "variant_profile": "ordered-structured",
+  "variant_profile_description": "Use sorted, nearly sorted, regular, symmetric, or otherwise highly structured input.",
+  "model": "kit.gpt-oss-120b",
+  "base_url": "https://ki-toolbox.scc.kit.edu/api/v1",
+  "temperature": 0.8,
+  "attempt": 1,
+  "basic_validation": "Basic validation passed.",
+  "compiler_validation": "Compiler validation disabled.",
+  "usage": {
+    "prompt_tokens": 5988,
+    "completion_tokens": 2783,
+    "total_tokens": 8771
+  }
+}
