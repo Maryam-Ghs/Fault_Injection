@@ -719,6 +719,14 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--filter", default="", help="source-path substring filter")
     parser.add_argument(
+        "--shard-count", type=int, default=1,
+        help="split the sorted source list into this many disjoint shards",
+    )
+    parser.add_argument(
+        "--shard-index", type=int, default=0,
+        help="zero-based shard to process (source_index modulo shard_count)",
+    )
+    parser.add_argument(
         "--resume", action=argparse.BooleanOptionalAction, default=True
     )
     parser.add_argument(
@@ -732,6 +740,10 @@ def parse_args() -> argparse.Namespace:
     args = parser.parse_args()
     args.source_dir = args.source_dir.resolve()
     args.output_dir = args.output_dir.resolve()
+    if args.shard_count < 1:
+        parser.error("--shard-count must be at least 1")
+    if args.shard_index < 0 or args.shard_index >= args.shard_count:
+        parser.error("--shard-index must be in [0, shard-count)")
     return args
 
 
@@ -763,6 +775,11 @@ def main() -> int:
     sources = sorted(args.source_dir.rglob("*.cpp"))
     if args.filter:
         sources = [source for source in sources if args.filter in str(source)]
+    if args.shard_count > 1:
+        sources = [
+            source for index, source in enumerate(sources)
+            if index % args.shard_count == args.shard_index
+        ]
     if args.limit:
         sources = sources[: args.limit]
     campaigns = (

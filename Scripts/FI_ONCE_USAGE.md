@@ -42,6 +42,17 @@ Scripts/Run_FI_once.sh --filter 2_Opt_Heuristic_TSP_v10
 Scripts/Run_FI_once.sh --timeout 10 --compile-timeout 120
 ```
 
+For schedulers, the source list can be divided into stable, disjoint shards:
+
+```bash
+Scripts/Run_FI_once.sh --shard-count 64 --shard-index 0
+```
+
+Shard assignment uses the index in the sorted, filtered source list modulo the
+shard count. All indices from 0 through 63 therefore cover every source exactly
+once. Do not change the source corpus or shard count while resuming a sharded
+campaign.
+
 Runs are resumable by default. A completed source/configuration is skipped, and
 individual result rows are written immediately. Use `--no-resume` only when
 duplicate reruns are intentionally wanted.
