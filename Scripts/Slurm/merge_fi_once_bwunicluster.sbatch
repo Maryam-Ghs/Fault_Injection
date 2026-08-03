@@ -9,12 +9,15 @@ set -euo pipefail
 : "${FI_RESULT_ROOT:?}"
 : "${FI_RUN_ID:?}"
 : "${FI_SHARD_COUNT:?}"
-: "${FI_SEED_START:?}"
-: "${FI_SEED_COUNT:?}"
+: "${FI_SEEDS:?}"
+: "${FI_SLURM_SCRIPT_DIR:?FI_SLURM_SCRIPT_DIR must be the real Scripts/Slurm directory}"
 
-SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+SCRIPT_DIR=$FI_SLURM_SCRIPT_DIR
+[[ -f "$SCRIPT_DIR/merge_fi_once_shards.py" ]] || {
+    echo "Merge helper not found: $SCRIPT_DIR/merge_fi_once_shards.py" >&2
+    exit 2
+}
 python3 "$SCRIPT_DIR/merge_fi_once_shards.py" \
     --run-root "$FI_RESULT_ROOT/$FI_RUN_ID" \
     --shard-count "$FI_SHARD_COUNT" \
-    --seed-start "$FI_SEED_START" \
-    --seed-count "$FI_SEED_COUNT"
+    --seed-list "$FI_SEEDS"
